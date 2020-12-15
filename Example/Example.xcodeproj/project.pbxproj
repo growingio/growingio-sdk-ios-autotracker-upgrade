@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0126955617D3776FA37FBE91 /* Pods_autotracker_upgrade_2to3_cdp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCD80A55F71E707514896C7 /* Pods_autotracker_upgrade_2to3_cdp.framework */; };
+		047DBFC92583257B00B9F7A1 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 047DBFC82583257B00B9F7A1 /* AppDelegate.mm */; };
+		047DBFCC2583257B00B9F7A1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 047DBFCB2583257B00B9F7A1 /* SceneDelegate.m */; };
+		047DBFCF2583257B00B9F7A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047DBFCE2583257B00B9F7A1 /* ViewController.m */; };
+		047DBFD22583257B00B9F7A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047DBFD02583257B00B9F7A1 /* Main.storyboard */; };
+		047DBFD42583257C00B9F7A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047DBFD32583257C00B9F7A1 /* Assets.xcassets */; };
+		047DBFD72583257C00B9F7A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047DBFD52583257C00B9F7A1 /* LaunchScreen.storyboard */; };
+		047DBFDA2583257C00B9F7A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 047DBFD92583257C00B9F7A1 /* main.m */; };
+		047DC0FD25874CFE00B9F7A1 /* TrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047DC0F925874CFE00B9F7A1 /* TrackViewController.m */; };
+		047DC0FE25874CFE00B9F7A1 /* GIOWKWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047DC0FB25874CFE00B9F7A1 /* GIOWKWebViewViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00D4D63D1068F3FEF5F89C01 /* Pods-tracker-upgrade-2to3-cdp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tracker-upgrade-2to3-cdp.debug.xcconfig"; path = "Target Support Files/Pods-tracker-upgrade-2to3-cdp/Pods-tracker-upgrade-2to3-cdp.debug.xcconfig"; sourceTree = "<group>"; };
+		047DBFC52583257B00B9F7A1 /* autotracker-upgrade-2to3-cdp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "autotracker-upgrade-2to3-cdp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		047DBFC72583257B00B9F7A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		047DBFC82583257B00B9F7A1 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		047DBFCA2583257B00B9F7A1 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		047DBFCB2583257B00B9F7A1 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		047DBFCD2583257B00B9F7A1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		047DBFCE2583257B00B9F7A1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		047DBFD12583257B00B9F7A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		047DBFD32583257C00B9F7A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		047DBFD62583257C00B9F7A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		047DBFD82583257C00B9F7A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		047DBFD92583257C00B9F7A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		047DC0F925874CFE00B9F7A1 /* TrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackViewController.m; sourceTree = "<group>"; };
+		047DC0FA25874CFE00B9F7A1 /* GIOWKWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIOWKWebViewViewController.h; sourceTree = "<group>"; };
+		047DC0FB25874CFE00B9F7A1 /* GIOWKWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIOWKWebViewViewController.m; sourceTree = "<group>"; };
+		047DC0FC25874CFE00B9F7A1 /* TrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackViewController.h; sourceTree = "<group>"; };
+		316287482C120DEE501D5223 /* Pods-autotracker-upgrade-2to3-cdp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-autotracker-upgrade-2to3-cdp.debug.xcconfig"; path = "Target Support Files/Pods-autotracker-upgrade-2to3-cdp/Pods-autotracker-upgrade-2to3-cdp.debug.xcconfig"; sourceTree = "<group>"; };
+		5DCD80A55F71E707514896C7 /* Pods_autotracker_upgrade_2to3_cdp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_autotracker_upgrade_2to3_cdp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93E68B9F68FE97224870ECE7 /* Pods-tracker-upgrade-2to3-cdp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tracker-upgrade-2to3-cdp.release.xcconfig"; path = "Target Support Files/Pods-tracker-upgrade-2to3-cdp/Pods-tracker-upgrade-2to3-cdp.release.xcconfig"; sourceTree = "<group>"; };
+		BB2403BB0CDA2490CB411537 /* Pods-autotracker-upgrade-2to3-cdp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-autotracker-upgrade-2to3-cdp.release.xcconfig"; path = "Target Support Files/Pods-autotracker-upgrade-2to3-cdp/Pods-autotracker-upgrade-2to3-cdp.release.xcconfig"; sourceTree = "<group>"; };
+		BF6D8E1C8267A120607BADAB /* Pods_tracker_upgrade_2to3_cdp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tracker_upgrade_2to3_cdp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		047DBFC22583257B00B9F7A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0126955617D3776FA37FBE91 /* Pods_autotracker_upgrade_2to3_cdp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		047DBEFC2582176F00B9F7A1 = {
+			isa = PBXGroup;
+			children = (
+				047DBFC62583257B00B9F7A1 /* autotracker-upgrade-2to3-cdp */,
+				047DBF062582176F00B9F7A1 /* Products */,
+				6717AE1C0AA179CD6557B999 /* Pods */,
+				DA2E443340E4C97DBDD496FD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		047DBF062582176F00B9F7A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				047DBFC52583257B00B9F7A1 /* autotracker-upgrade-2to3-cdp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		047DBFC62583257B00B9F7A1 /* autotracker-upgrade-2to3-cdp */ = {
+			isa = PBXGroup;
+			children = (
+				047DC0F825874CFE00B9F7A1 /* CdpTrack */,
+				047DBFC72583257B00B9F7A1 /* AppDelegate.h */,
+				047DBFC82583257B00B9F7A1 /* AppDelegate.mm */,
+				047DBFCA2583257B00B9F7A1 /* SceneDelegate.h */,
+				047DBFCB2583257B00B9F7A1 /* SceneDelegate.m */,
+				047DBFCD2583257B00B9F7A1 /* ViewController.h */,
+				047DBFCE2583257B00B9F7A1 /* ViewController.m */,
+				047DBFD02583257B00B9F7A1 /* Main.storyboard */,
+				047DBFD32583257C00B9F7A1 /* Assets.xcassets */,
+				047DBFD52583257C00B9F7A1 /* LaunchScreen.storyboard */,
+				047DBFD82583257C00B9F7A1 /* Info.plist */,
+				047DBFD92583257C00B9F7A1 /* main.m */,
+			);
+			path = "autotracker-upgrade-2to3-cdp";
+			sourceTree = "<group>";
+		};
+		047DC0F825874CFE00B9F7A1 /* CdpTrack */ = {
+			isa = PBXGroup;
+			children = (
+				047DC0FA25874CFE00B9F7A1 /* GIOWKWebViewViewController.h */,
+				047DC0FB25874CFE00B9F7A1 /* GIOWKWebViewViewController.m */,
+				047DC0FC25874CFE00B9F7A1 /* TrackViewController.h */,
+				047DC0F925874CFE00B9F7A1 /* TrackViewController.m */,
+			);
+			path = CdpTrack;
+			sourceTree = "<group>";
+		};
+		6717AE1C0AA179CD6557B999 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00D4D63D1068F3FEF5F89C01 /* Pods-tracker-upgrade-2to3-cdp.debug.xcconfig */,
+				93E68B9F68FE97224870ECE7 /* Pods-tracker-upgrade-2to3-cdp.release.xcconfig */,
+				316287482C120DEE501D5223 /* Pods-autotracker-upgrade-2to3-cdp.debug.xcconfig */,
+				BB2403BB0CDA2490CB411537 /* Pods-autotracker-upgrade-2to3-cdp.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		DA2E443340E4C97DBDD496FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6D8E1C8267A120607BADAB /* Pods_tracker_upgrade_2to3_cdp.framework */,
+				5DCD80A55F71E707514896C7 /* Pods_autotracker_upgrade_2to3_cdp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		047DBFC42583257B00B9F7A1 /* autotracker-upgrade-2to3-cdp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 047DBFDD2583257C00B9F7A1 /* Build configuration list for PBXNativeTarget "autotracker-upgrade-2to3-cdp" */;
+			buildPhases = (
+				67DECB9E4449BE28FEC6E2D7 /* [CP] Check Pods Manifest.lock */,
+				047DBFC12583257B00B9F7A1 /* Sources */,
+				047DBFC22583257B00B9F7A1 /* Frameworks */,
+				047DBFC32583257B00B9F7A1 /* Resources */,
+				097B7C3190096797A526DBA3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "autotracker-upgrade-2to3-cdp";
+			productName = "autotracker-upgrade-2to3-cdp";
+			productReference = 047DBFC52583257B00B9F7A1 /* autotracker-upgrade-2to3-cdp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		047DBEFD2582176F00B9F7A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					047DBFC42583257B00B9F7A1 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = 047DBF002582176F00B9F7A1 /* Build configuration list for PBXProject "Example" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 047DBEFC2582176F00B9F7A1;
+			productRefGroup = 047DBF062582176F00B9F7A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				047DBFC42583257B00B9F7A1 /* autotracker-upgrade-2to3-cdp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		047DBFC32583257B00B9F7A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047DBFD72583257C00B9F7A1 /* LaunchScreen.storyboard in Resources */,
+				047DBFD42583257C00B9F7A1 /* Assets.xcassets in Resources */,
+				047DBFD22583257B00B9F7A1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		097B7C3190096797A526DBA3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-autotracker-upgrade-2to3-cdp/Pods-autotracker-upgrade-2to3-cdp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-autotracker-upgrade-2to3-cdp/Pods-autotracker-upgrade-2to3-cdp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-autotracker-upgrade-2to3-cdp/Pods-autotracker-upgrade-2to3-cdp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67DECB9E4449BE28FEC6E2D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-autotracker-upgrade-2to3-cdp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		047DBFC12583257B00B9F7A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047DC0FD25874CFE00B9F7A1 /* TrackViewController.m in Sources */,
+				047DBFCF2583257B00B9F7A1 /* ViewController.m in Sources */,
+				047DBFC92583257B00B9F7A1 /* AppDelegate.mm in Sources */,
+				047DBFDA2583257C00B9F7A1 /* main.m in Sources */,
+				047DC0FE25874CFE00B9F7A1 /* GIOWKWebViewViewController.m in Sources */,
+				047DBFCC2583257B00B9F7A1 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		047DBFD02583257B00B9F7A1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				047DBFD12583257B00B9F7A1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		047DBFD52583257C00B9F7A1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				047DBFD62583257C00B9F7A1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		047DBF1C2582177200B9F7A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		047DBF1D2582177200B9F7A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		047DBFDB2583257C00B9F7A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 316287482C120DEE501D5223 /* Pods-autotracker-upgrade-2to3-cdp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "autotracker-upgrade-2to3-cdp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = growingio.GrowingCDP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		047DBFDC2583257C00B9F7A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB2403BB0CDA2490CB411537 /* Pods-autotracker-upgrade-2to3-cdp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "autotracker-upgrade-2to3-cdp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = growingio.GrowingCDP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		047DBF002582176F00B9F7A1 /* Build configuration list for PBXProject "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				047DBF1C2582177200B9F7A1 /* Debug */,
+				047DBF1D2582177200B9F7A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		047DBFDD2583257C00B9F7A1 /* Build configuration list for PBXNativeTarget "autotracker-upgrade-2to3-cdp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				047DBFDB2583257C00B9F7A1 /* Debug */,
+				047DBFDC2583257C00B9F7A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 047DBEFD2582176F00B9F7A1 /* Project object */;
+}
