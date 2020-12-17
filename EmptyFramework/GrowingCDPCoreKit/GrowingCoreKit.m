@@ -12,7 +12,7 @@
 #import "GrowingConfigurationManager.h"
 #import "GrowingSession.h"
 #import "GrowingEventManager.h"
-#import "GrowingHybirdPageEvent.h"
+#import "GrowingHybridPageEvent.h"
 #import "GrowingTimeUtil.h"
 #import "GrowingLog.h"
 #import "GrowingTTYLogger.h"
@@ -286,7 +286,7 @@ static BOOL _disablePushTrack = YES;
     if ([GrowingArgumentChecker isIllegalAttributes:variable]) {
         return;
     }
-    [GrowingEventGenerator generateConversionVariablesEvent:variable];
+    [GrowingEventGenerator generateConversionAttributesEvent:variable];
 }
 
 + (void)setEvarWithKey:(NSString *)key andStringValue:(NSString *)stringValue {
@@ -379,7 +379,7 @@ static BOOL _disablePushTrack = YES;
         query = [query substringToIndex:([query length] - 1)];
     }
     
-    [[GrowingEventManager shareInstance] postEventBuidler:GrowingHybirdPageEvent.builder.setPath(pageName).setQuery(query).setTimestamp([GrowingTimeUtil currentTimeMillis])];
+    [[GrowingEventManager shareInstance] postEventBuidler:GrowingHybridPageEvent.builder.setPath(pageName).setQuery(query).setTimestamp([GrowingTimeUtil currentTimeMillis])];
 }
 
 + (void)setUserAttributes:(NSDictionary<NSString *, id> *)attributes {

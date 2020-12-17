@@ -6,6 +6,30 @@
 	objectVersion = 51;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		042F064A258B77F300DFA3EB /* CodeCheck */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 042F064D258B77F300DFA3EB /* Build configuration list for PBXAggregateTarget "CodeCheck" */;
+			buildPhases = (
+				042F0650258B780300DFA3EB /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = CodeCheck;
+			productName = CodeCheck;
+		};
+		042F0659258B781E00DFA3EB /* CodeFormat */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 042F065A258B781E00DFA3EB /* Build configuration list for PBXAggregateTarget "CodeFormat" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = CodeFormat;
+			productName = CodeFormat;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		0126955617D3776FA37FBE91 /* Pods_autotracker_upgrade_2to3_cdp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCD80A55F71E707514896C7 /* Pods_autotracker_upgrade_2to3_cdp.framework */; };
 		047DBFC92583257B00B9F7A1 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 047DBFC82583257B00B9F7A1 /* AppDelegate.mm */; };
@@ -155,6 +179,12 @@
 			attributes = {
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					042F064A258B77F300DFA3EB = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					042F0659258B781E00DFA3EB = {
+						CreatedOnToolsVersion = 12.0;
+					};
 					047DBFC42583257B00B9F7A1 = {
 						CreatedOnToolsVersion = 12.0;
 					};
@@ -174,6 +204,8 @@
 			projectRoot = "";
 			targets = (
 				047DBFC42583257B00B9F7A1 /* autotracker-upgrade-2to3-cdp */,
+				042F064A258B77F300DFA3EB /* CodeCheck */,
+				042F0659258B781E00DFA3EB /* CodeFormat */,
 			);
 		};
 /* End PBXProject section */
@@ -192,6 +224,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		042F0650258B780300DFA3EB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "##### 提交CI前自行检测代码 #####\n# 1.请提前使用Codeformat进行代码格式化\n# 2.执行此脚本前请先确保工程编译通过\n\ncd ${SRCROOT}/../Scripts\nsh code-checker.sh\n";
+		};
 		097B7C3190096797A526DBA3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -269,6 +318,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		042F064B258B77F300DFA3EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		042F064C258B77F300DFA3EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		042F065B258B781E00DFA3EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		042F065C258B781E00DFA3EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		047DBF1C2582177200B9F7A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -422,6 +503,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		042F064D258B77F300DFA3EB /* Build configuration list for PBXAggregateTarget "CodeCheck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				042F064B258B77F300DFA3EB /* Debug */,
+				042F064C258B77F300DFA3EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		042F065A258B781E00DFA3EB /* Build configuration list for PBXAggregateTarget "CodeFormat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				042F065B258B781E00DFA3EB /* Debug */,
+				042F065C258B781E00DFA3EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		047DBF002582176F00B9F7A1 /* Build configuration list for PBXProject "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

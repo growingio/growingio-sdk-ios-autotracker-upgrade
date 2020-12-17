@@ -1,4 +1,4 @@
-GrowingIO Autotracker For CDP
+GrowingIO Autotracker Upgrade For CDP
 ======
 ![GrowingIO](https://www.growingio.com/vassets/images/home_v3/gio-logo-primary.svg)  
 [![CI](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/workflows/CI/badge.svg)](https://github.com/growingio/growingio-sdk-ios-autotracker-cdp/actions)
@@ -11,9 +11,18 @@ GrowingIO Autotracker For CDP
 [**GrowingIO**](https://www.growingio.com/) 专注于零售、电商、金融、酒旅航司、教育、内容社区、B2B等行业，成立以来，服务上千家企业级客户，获得迪奥、安踏、喜茶、招商仁和人寿、上汽集团、东航、春航、首旅如家、陌陌、滴滴、爱奇艺、新东方等客户的青睐。
 
 ## SDK 简介
-**GrowingIO Autotracker** 具备自动采集基本的用户行为事件，比如访问和行为数据等。目前支持代码埋点、无埋点、可视化圈选、热图等功能。
+
+**GrowingIO Autotracker Upgrade** 用于CDP SDK 2.x埋点用户迁移到CDP SDK 3.x无埋点。
+
+集成后，变化有以下：
+
+1. 2.x to 3.x 版本的迁移
+2. 埋点 to 无埋点
+3. 需要手动调用upgrade方法以及修改SDK初始化方法
+4. 删除了部分接口
 
 ## 集成文档
+
 敬请期待……
 
 ## License
