@@ -32,6 +32,7 @@ jobs:
           git clone https://github.com/growingio/growingio-sdk-ios-autotracker-cdp.git
           cd $GITHUB_WORKSPACE
           sh ./Scripts/podfile_change.sh
+          cat $GITHUB_WORKSPACE/Podfile
           pod install
 
       # Runs a set of commands using the runners shell
