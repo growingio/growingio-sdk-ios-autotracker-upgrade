@@ -7,14 +7,14 @@
 #import "GIOWKWebViewViewController.h"
 #import "Growing.h"
 
-static NSString *const kLoadUrl = @"https://release-messages.growingio.cn/push/cdp/webcircel.html";
+static NSString *const kGrowingLoadUrl = @"https://release-messages.growingio.cn/push/cdp/webcircel.html";
 
 @implementation GIOWKWebViewViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
     WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.frame];
     [Growing bridgeForWKWebView:webView];
-    NSURL *url = [NSURL URLWithString:kLoadUrl];
+    NSURL *url = [NSURL URLWithString:kGrowingLoadUrl];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
     [self.view addSubview:webView];

@@ -31,6 +31,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Growing upgrade];
     GrowingTrackConfiguration *config = [[GrowingTrackConfiguration alloc] initWithProjectId:@"a500f222e29e3b0c"];
     config.dataSourceId = @"b4a81e6c07645691";
     config.debugEnabled = YES;
