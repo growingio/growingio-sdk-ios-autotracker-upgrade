@@ -41,6 +41,7 @@
 		047DBFDA2583257C00B9F7A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 047DBFD92583257C00B9F7A1 /* main.m */; };
 		047DC0FD25874CFE00B9F7A1 /* TrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047DC0F925874CFE00B9F7A1 /* TrackViewController.m */; };
 		047DC0FE25874CFE00B9F7A1 /* GIOWKWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047DC0FB25874CFE00B9F7A1 /* GIOWKWebViewViewController.m */; };
+		04AC43EF25B0471D00698C4C /* GrowingCDPCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AC43EE25B0471D00698C4C /* GrowingCDPCoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		047DC0FA25874CFE00B9F7A1 /* GIOWKWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIOWKWebViewViewController.h; sourceTree = "<group>"; };
 		047DC0FB25874CFE00B9F7A1 /* GIOWKWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIOWKWebViewViewController.m; sourceTree = "<group>"; };
 		047DC0FC25874CFE00B9F7A1 /* TrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackViewController.h; sourceTree = "<group>"; };
+		04AC43EE25B0471D00698C4C /* GrowingCDPCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GrowingCDPCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		316287482C120DEE501D5223 /* Pods-autotracker-upgrade-2to3-cdp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-autotracker-upgrade-2to3-cdp.debug.xcconfig"; path = "Target Support Files/Pods-autotracker-upgrade-2to3-cdp/Pods-autotracker-upgrade-2to3-cdp.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCD80A55F71E707514896C7 /* Pods_autotracker_upgrade_2to3_cdp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_autotracker_upgrade_2to3_cdp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E68B9F68FE97224870ECE7 /* Pods-tracker-upgrade-2to3-cdp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tracker-upgrade-2to3-cdp.release.xcconfig"; path = "Target Support Files/Pods-tracker-upgrade-2to3-cdp/Pods-tracker-upgrade-2to3-cdp.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04AC43EF25B0471D00698C4C /* GrowingCDPCoreKit.framework in Frameworks */,
 				0126955617D3776FA37FBE91 /* Pods_autotracker_upgrade_2to3_cdp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +146,7 @@
 		DA2E443340E4C97DBDD496FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04AC43EE25B0471D00698C4C /* GrowingCDPCoreKit.framework */,
 				BF6D8E1C8267A120607BADAB /* Pods_tracker_upgrade_2to3_cdp.framework */,
 				5DCD80A55F71E707514896C7 /* Pods_autotracker_upgrade_2to3_cdp.framework */,
 			);
@@ -476,6 +480,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = growingio.GrowingCDP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -495,6 +503,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = growingio.GrowingCDP;
 				PRODUCT_NAME = "$(TARGET_NAME)";

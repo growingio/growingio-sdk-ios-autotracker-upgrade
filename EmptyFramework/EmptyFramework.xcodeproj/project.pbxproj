@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		047DC04D2587314700B9F7A1 /* GrowingCoreKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 047DC04B2587314700B9F7A1 /* GrowingCoreKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		047DC04E2587314700B9F7A1 /* GrowingCoreKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 047DC04C2587314700B9F7A1 /* GrowingCoreKit.m */; };
-		CD7EC9103C320C7F2233CDD0 /* Pods_GrowingCDPCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11720634D69CEAB9C56A9109 /* Pods_GrowingCDPCoreKit.framework */; };
+		6CF78C47AD2BE12CE1F87A3B /* Pods_GrowingCDPCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11720634D69CEAB9C56A9109 /* Pods_GrowingCDPCoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD7EC9103C320C7F2233CDD0 /* Pods_GrowingCDPCoreKit.framework in Frameworks */,
+				6CF78C47AD2BE12CE1F87A3B /* Pods_GrowingCDPCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +314,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = GrowingCDPCoreKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -324,6 +326,7 @@
 				);
 				MACH_O_TYPE = staticlib;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.growingio.GrowingCDPCoreKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -345,6 +348,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = GrowingCDPCoreKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -355,6 +360,7 @@
 				);
 				MACH_O_TYPE = staticlib;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.growingio.GrowingCDPCoreKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
