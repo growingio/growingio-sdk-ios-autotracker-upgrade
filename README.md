@@ -23,7 +23,7 @@ GrowingIO Autotracker Upgrade For CDP
 
 ## 集成文档
 
-敬请期待……
+https://github.com/growingio/growingio-sdk-ios-autotracker-upgrade/wiki
 
 ## License
 ```
