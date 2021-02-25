@@ -87,7 +87,7 @@ static BOOL _enableLog;
     return _enableLog;
 }
 
-static NSString *kGrowingUserdefault_2xto3x = @"";
+static NSString *kGrowingUserdefault_2xto3x = @"kGrowingUserdefault_2xto3x_cdp";
 
 #define GROWINGIO_KEYCHAIN_KEY  @"GROWINGIO_KEYCHAIN_KEY"
 #define GROWINGIO_CUSTOM_U_KEY  @"GROWINGIO_CUSTOM_U_KEY"

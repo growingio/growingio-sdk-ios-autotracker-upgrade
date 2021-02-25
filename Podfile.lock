@@ -1,16 +1,16 @@
 PODS:
-  - GrowingAnalytics-cdp/Autotracker (3.0.0):
-    - GrowingAnalytics-cdp/TrackerCore (= 3.0.0)
-    - GrowingAnalytics/AutotrackerCore (= 3.0.0)
-  - GrowingAnalytics-cdp/TrackerCore (3.0.0):
-    - GrowingAnalytics/TrackerCore (= 3.0.0)
+  - GrowingAnalytics-cdp/Autotracker (3.0.2):
+    - GrowingAnalytics-cdp/TrackerCore (= 3.0.2)
+    - GrowingAnalytics/AutotrackerCore (= 3.0.2)
+  - GrowingAnalytics-cdp/TrackerCore (3.0.2):
+    - GrowingAnalytics/TrackerCore (= 3.0.2)
   - GrowingAnalytics-upgrade/Autotracker-upgrade-2to3-cdp (1.0.0):
     - GrowingAnalytics-cdp/Autotracker
     - GrowingAnalytics-upgrade/Upgrade-base
   - GrowingAnalytics-upgrade/Upgrade-base (1.0.0)
-  - GrowingAnalytics/AutotrackerCore (3.0.0):
+  - GrowingAnalytics/AutotrackerCore (3.0.2):
     - GrowingAnalytics/TrackerCore
-  - GrowingAnalytics/TrackerCore (3.0.0)
+  - GrowingAnalytics/TrackerCore (3.0.2)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.4.3)
   - SDCycleScrollView (1.82):
@@ -20,7 +20,7 @@ PODS:
   - SDWebImage/Core (5.8.4)
 
 DEPENDENCIES:
-  - GrowingAnalytics-cdp/Autotracker (~> 3.0.0)
+  - GrowingAnalytics-cdp/Autotracker (~> 3.0.2)
   - GrowingAnalytics-upgrade/Autotracker-upgrade-2to3-cdp (from `./`)
   - MBProgressHUD (~> 1.2.0)
   - MJRefresh (~> 3.4.3)
@@ -41,14 +41,14 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  GrowingAnalytics: 784016b99ce69417053899f3f68452786a10efd7
-  GrowingAnalytics-cdp: 2a6cfd06fc15ba5f23a72cee10dbb25f1f7514c0
+  GrowingAnalytics: 636180a7b1d6da4e7a2f1bd11274c25cb7fd8f25
+  GrowingAnalytics-cdp: 3b55e37849379f9e32e0543f23ee2f865bab5c39
   GrowingAnalytics-upgrade: 6b67f93ca953186ef1bce47ef8507017f7a28dcf
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
 
-PODFILE CHECKSUM: e32725fbb8c8c5944e8b4ee3f30a62834a4dde4c
+PODFILE CHECKSUM: 378a3cc509407cf7d4fa528fe29835bd5582face
 
 COCOAPODS: 1.9.1
