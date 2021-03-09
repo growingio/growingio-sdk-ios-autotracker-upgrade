@@ -28,16 +28,17 @@ TODO: Add long description of the pod here.
   'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
   
+  s.subspec 'Upgrade-base' do |base|
+      base.source_files = 'Upgrade-base/**/*{.h,.m}'
+      base.exclude_files = 'Upgrade-base/2x/HookBase/FoAspectBody.m'
+      base.dependency 'GrowingAnalytics-cdp/Autotracker'
+      base.dependency 'GrowingAnalytics/AutotrackerCore'
+  end
+  
   s.subspec 'Autotracker-upgrade-2to3-cdp' do |autotracker2to3cdp|
       autotracker2to3cdp.source_files = 'Autotracker-upgrade-2to3-cdp/**/*{.h}'
-      autotracker2to3cdp.dependency 'GrowingAnalytics-cdp/Autotracker'
       autotracker2to3cdp.dependency 'GrowingAnalytics-upgrade/Upgrade-base'
       autotracker2to3cdp.vendored_frameworks = 'Autotracker-upgrade-2to3-cdp/Frameworks/*.framework'
   end
   
-  s.subspec 'Upgrade-base' do |base|
-      base.source_files = 'Upgrade-base/**/*{.h,.m}'
-      base.public_header_files = 'Upgrade-base/**/*{.h,.m}'
-  end
-
 end
