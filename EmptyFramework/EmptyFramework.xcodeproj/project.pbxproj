@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		047DC04D2587314700B9F7A1 /* GrowingCoreKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 047DC04B2587314700B9F7A1 /* GrowingCoreKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		047DC04E2587314700B9F7A1 /* GrowingCoreKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 047DC04C2587314700B9F7A1 /* GrowingCoreKit.m */; };
-		6CF78C47AD2BE12CE1F87A3B /* Pods_GrowingCDPCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11720634D69CEAB9C56A9109 /* Pods_GrowingCDPCoreKit.framework */; };
+		04AD4D1425F71AFE00B93DB0 /* GrowingCoreKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD4D1225F71AFE00B93DB0 /* GrowingCoreKit.m */; };
+		04AD4D1525F71AFE00B93DB0 /* GrowingCoreKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 04AD4D1325F71AFE00B93DB0 /* GrowingCoreKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65A793D333F0308052B0894C /* libPods-GrowingCDPCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE4644E2BDAE231A50971B3 /* libPods-GrowingCDPCoreKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,9 +19,13 @@
 		047DC03225872BAF00B9F7A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		047DC04B2587314700B9F7A1 /* GrowingCoreKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowingCoreKit.h; sourceTree = "<group>"; };
 		047DC04C2587314700B9F7A1 /* GrowingCoreKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowingCoreKit.m; sourceTree = "<group>"; };
-		11720634D69CEAB9C56A9109 /* Pods_GrowingCDPCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrowingCDPCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04AD4CE125F719C800B93DB0 /* GrowingCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GrowingCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04AD4CE425F719C800B93DB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04AD4D1225F71AFE00B93DB0 /* GrowingCoreKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowingCoreKit.m; sourceTree = "<group>"; };
+		04AD4D1325F71AFE00B93DB0 /* GrowingCoreKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowingCoreKit.h; sourceTree = "<group>"; };
 		1A0AEA9B1BD97541FBA2B698 /* Pods-GrowingCDPCoreKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrowingCDPCoreKit.release.xcconfig"; path = "Target Support Files/Pods-GrowingCDPCoreKit/Pods-GrowingCDPCoreKit.release.xcconfig"; sourceTree = "<group>"; };
 		A5726F0BB997B872E0B71153 /* Pods-GrowingCDPCoreKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrowingCDPCoreKit.debug.xcconfig"; path = "Target Support Files/Pods-GrowingCDPCoreKit/Pods-GrowingCDPCoreKit.debug.xcconfig"; sourceTree = "<group>"; };
+		FEE4644E2BDAE231A50971B3 /* libPods-GrowingCDPCoreKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GrowingCDPCoreKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,7 +33,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CF78C47AD2BE12CE1F87A3B /* Pods_GrowingCDPCoreKit.framework in Frameworks */,
+				65A793D333F0308052B0894C /* libPods-GrowingCDPCoreKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04AD4CDE25F719C800B93DB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				047DC03025872BAF00B9F7A1 /* GrowingCDPCoreKit */,
+				04AD4CE225F719C800B93DB0 /* GrowingCoreKit */,
 				047DC00D25872B3C00B9F7A1 /* Products */,
 				29E37996613B039A3CF0C423 /* Pods */,
 				2AF284C644E2BE9D96DE71CA /* Frameworks */,
@@ -48,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				047DC02F25872BAF00B9F7A1 /* GrowingCDPCoreKit.framework */,
+				04AD4CE125F719C800B93DB0 /* GrowingCoreKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +75,16 @@
 				047DC03225872BAF00B9F7A1 /* Info.plist */,
 			);
 			path = GrowingCDPCoreKit;
+			sourceTree = "<group>";
+		};
+		04AD4CE225F719C800B93DB0 /* GrowingCoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				04AD4D1325F71AFE00B93DB0 /* GrowingCoreKit.h */,
+				04AD4D1225F71AFE00B93DB0 /* GrowingCoreKit.m */,
+				04AD4CE425F719C800B93DB0 /* Info.plist */,
+			);
+			path = GrowingCoreKit;
 			sourceTree = "<group>";
 		};
 		29E37996613B039A3CF0C423 /* Pods */ = {
@@ -75,7 +100,7 @@
 		2AF284C644E2BE9D96DE71CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				11720634D69CEAB9C56A9109 /* Pods_GrowingCDPCoreKit.framework */,
+				FEE4644E2BDAE231A50971B3 /* libPods-GrowingCDPCoreKit.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -88,6 +113,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				047DC04D2587314700B9F7A1 /* GrowingCoreKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04AD4CDC25F719C800B93DB0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AD4D1525F71AFE00B93DB0 /* GrowingCoreKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +146,24 @@
 			productReference = 047DC02F25872BAF00B9F7A1 /* GrowingCDPCoreKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		04AD4CE025F719C800B93DB0 /* GrowingCoreKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04AD4CE825F719C800B93DB0 /* Build configuration list for PBXNativeTarget "GrowingCoreKit" */;
+			buildPhases = (
+				04AD4CDC25F719C800B93DB0 /* Headers */,
+				04AD4CDD25F719C800B93DB0 /* Sources */,
+				04AD4CDE25F719C800B93DB0 /* Frameworks */,
+				04AD4CDF25F719C800B93DB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GrowingCoreKit;
+			productName = GrowingCoreKit;
+			productReference = 04AD4CE125F719C800B93DB0 /* GrowingCoreKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -123,6 +174,9 @@
 				TargetAttributes = {
 					047DC02E25872BAF00B9F7A1 = {
 						CreatedOnToolsVersion = 12.0;
+					};
+					04AD4CE025F719C800B93DB0 = {
+						CreatedOnToolsVersion = 12.3;
 					};
 				};
 			};
@@ -140,12 +194,20 @@
 			projectRoot = "";
 			targets = (
 				047DC02E25872BAF00B9F7A1 /* GrowingCDPCoreKit */,
+				04AD4CE025F719C800B93DB0 /* GrowingCoreKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		047DC02D25872BAF00B9F7A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04AD4CDF25F719C800B93DB0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -185,6 +247,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				047DC04E2587314700B9F7A1 /* GrowingCoreKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04AD4CDD25F719C800B93DB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AD4D1425F71AFE00B93DB0 /* GrowingCoreKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +388,7 @@
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = GrowingCDPCoreKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,7 +422,7 @@
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = GrowingCDPCoreKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,6 +432,64 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.growingio.GrowingCDPCoreKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		04AD4CE625F719C800B93DB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GrowingCoreKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.growingio.GrowingCoreKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		04AD4CE725F719C800B93DB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GrowingCoreKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.growingio.GrowingCoreKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
@@ -388,6 +516,15 @@
 			buildConfigurations = (
 				047DC03925872BAF00B9F7A1 /* Debug */,
 				047DC03A25872BAF00B9F7A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04AD4CE825F719C800B93DB0 /* Build configuration list for PBXNativeTarget "GrowingCoreKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04AD4CE625F719C800B93DB0 /* Debug */,
+				04AD4CE725F719C800B93DB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

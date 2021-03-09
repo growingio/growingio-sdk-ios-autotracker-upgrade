@@ -31,10 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-- (IBAction)trackEvent:(id)sender {
-    TrackViewController *trackvc = [[TrackViewController alloc] init];
-    [self.navigationController pushViewController:trackvc animated:YES];
-}
+
 
 
 @end

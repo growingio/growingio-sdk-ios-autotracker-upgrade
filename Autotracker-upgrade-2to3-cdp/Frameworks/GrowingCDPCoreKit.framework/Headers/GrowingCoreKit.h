@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
+#import "GrowingInstance.h"
 
 API_DEPRECATED("No longer supported; please adopt GrowingTracker.", ios(2.0, 8.0)) @interface Growing : NSObject
+
+// 该函数请在main函数第一行调用 APP启动后 将不允许修改采集模式
++ (void)setAspectMode:(GrowingAspectMode)aspectMode;
++ (GrowingAspectMode)getAspectMode;
 
 /// 需要在初始化前调用, 将userId以及deviceId从v2版本迁移到v3版本中
 + (void)upgrade;

@@ -24,13 +24,29 @@
 #import "GrowingPersistenceDataProvider.h"
 #import "GrowingCdpEventInterceptor.h"
 #import "NSString+GrowingHelper.h"
-
+#import "GrowingUpgradeDispatcher.h"
+#import "GrowingSession.h"
+#import "GrowingViewControllerLifecycle.h"
+#import "GrowingNotificationDelegateAutotracker.h"
+#import "GrowingNotificationDelegateManager.h"
+#import "GrowingEventManager.h"
+#import "GrowingInstance.h"
+#import "GrowingDeepLinkHandler.h"
+#import "GrowingAppLifecycle.h"
 
 #define GIOInvalidateMethod GIOLogError(@"%s在 SDK Version 3.0 以上已禁用",__FUNCTION__);
 
 @implementation Growing
 
 static NSString *growingBundleId = nil;
+
++ (void)setAspectMode:(GrowingAspectMode)aspectMode {
+    [GrowingInstance setAspectMode:aspectMode];
+}
+
++ (GrowingAspectMode)getAspectMode {
+    return [GrowingInstance aspectMode];
+}
 
 + (void)setBundleId:(NSString *)bundleId {
     growingBundleId = bundleId;
@@ -94,6 +110,16 @@ static NSString *kGrowingUserdefault_2xto3x = @"kGrowingUserdefault_2xto3x_cdp";
 
 /// 需要在初始化前调用, 将userId以及deviceId从v2版本迁移到v3版本中
 + (void)upgrade {
+    [GrowingNotificationDelegateAutotracker track];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [[GrowingAppLifecycle sharedInstance] addAppLifecycleDelegate:[GrowingUpgradeDispatcher sharedInstance]];
+        [[GrowingSession currentSession] addUserIdChangedDelegate:[GrowingUpgradeDispatcher sharedInstance]];
+        [[GrowingViewControllerLifecycle sharedInstance] addViewControllerLifecycleDelegate:[GrowingUpgradeDispatcher sharedInstance]];
+        [[GrowingNotificationDelegateManager sharedInstance] addNotificationDelegateObserver:[GrowingUpgradeDispatcher sharedInstance]];
+        [[GrowingEventManager shareInstance] addInterceptor:[GrowingUpgradeDispatcher sharedInstance]];
+        [[GrowingDeepLinkHandler sharedInstance] addHandlersObject:[GrowingUpgradeDispatcher sharedInstance]];
+    });
     NSString *isUpgraded = [[GrowingPersistenceDataProvider sharedInstance] getStringforKey:kGrowingUserdefault_2xto3x];
     if (isUpgraded) {
         return;
@@ -283,6 +309,7 @@ static BOOL _disablePushTrack = YES;
 }
 
 + (void)setEvar:(NSDictionary<NSString *, NSObject *> *)variable {
+    variable = [self fit3xDictionary:variable];
     if ([GrowingArgumentChecker isIllegalAttributes:variable]) {
         return;
     }
@@ -305,6 +332,7 @@ static BOOL _disablePushTrack = YES;
 }
 
 + (void)setVisitor:(NSDictionary<NSString *, NSObject *> *)variable {
+    variable = [self fit3xDictionary:variable];
     if ([GrowingArgumentChecker isIllegalAttributes:variable]) {
         return;
     }
@@ -312,6 +340,7 @@ static BOOL _disablePushTrack = YES;
 }
 
 + (void)setPeopleVariable:(NSDictionary<NSString *, NSObject *> *)variable {
+    variable = [self fit3xDictionary:variable];
     if ([GrowingArgumentChecker isIllegalAttributes:variable]) {
         return;
     }
@@ -337,7 +366,20 @@ static BOOL _disablePushTrack = YES;
 }
 
 + (void)track:(NSString *)eventId withVariable:(NSDictionary<NSString *, NSObject *> *)variable {
+    variable = [self fit3xDictionary:variable];
     [[GrowingAutotracker sharedInstance] trackCustomEvent:eventId withAttributes:variable];
+}
+
++ (NSDictionary *)fit3xDictionary:(NSDictionary*)variable {
+    NSMutableDictionary *mutDic = [NSMutableDictionary dictionaryWithDictionary:variable];
+    for (NSString *key in variable.allKeys) {
+        id obj = variable[key];
+        if ([obj isKindOfClass:[NSNumber class]]) {
+            NSString *value = ((NSNumber *)obj).stringValue;
+            [mutDic setValue:value forKey:key];
+        }
+    }
+    return mutDic;
 }
 
 + (void)track:(NSString *)eventId
@@ -360,6 +402,7 @@ static BOOL _disablePushTrack = YES;
 }
 
 + (void)trackPage:(NSString *)pageName withVariable:(NSDictionary<NSString *, id> *)variable {
+    variable = [self fit3xDictionary:variable];
     NSString *newPageName;
     if (![pageName hasPrefix:@"/"]) {
         newPageName = [NSString stringWithFormat:@"/%@", pageName];
@@ -383,6 +426,7 @@ static BOOL _disablePushTrack = YES;
 }
 
 + (void)setUserAttributes:(NSDictionary<NSString *, id> *)attributes {
+    attributes = [self fit3xDictionary:attributes];
     [[GrowingAutotracker sharedInstance] setLoginUserAttributes:attributes];
 }
 

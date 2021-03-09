@@ -6,6 +6,7 @@
 #import "TrackViewController.h"
 #import "GIOWKWebViewViewController.h"
 #import "Growing.h"
+#import <GrowingTouchCoreKit/GrowingTouchBannerView.h>
 
 static NSString *const kGrowingCellId = @"cellId";
 
@@ -18,7 +19,7 @@ static NSString *const kGrowingGoToWKWebViewVC = @"Go To WKWebView VC";
 @interface TrackViewController () <UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSArray<NSString *> *tableData;
-
+@property(nonatomic, strong)  GrowingTouchBannerView *bannerViews ;
 @end
 
 @implementation TrackViewController
@@ -34,8 +35,28 @@ static NSString *const kGrowingGoToWKWebViewVC = @"Go To WKWebView VC";
             kGrowingGoToWKWebViewVC
     ];
     [self.view addSubview:self.tableView];
+    
+    [self addBanner];
 }
-
+- (void)addBanner {
+    //触达banner
+    UIImage* placeholderImage = [UIImage imageNamed:@"suggest1"];
+    self.bannerViews = [GrowingTouchBannerView bannerKey:@"8520ac86ae6b13de"
+                                             bannerFrame:CGRectMake(0, self.view.bounds.size.height - 220, self.view.bounds.size.width ,220)
+                                        placeholderImage:placeholderImage];
+    self.bannerViews.bannerViewErrorImage = placeholderImage;
+        //  设置图片
+    self.bannerViews.currentPageIndicatorImage = [UIImage imageNamed:@"page_select"];
+    self.bannerViews.pageIndicatorImage = [UIImage imageNamed:@"page_unselect"];
+        self.bannerViews.pageIndicatorSize = CGSizeMake(6,6);
+        self.bannerViews.currentPageIndicatorSize = CGSizeMake(16,16);
+        self.bannerViews.currentPageIndicatorTintColor = [UIColor redColor];
+        self.bannerViews.pageIndicatorTintColor = [UIColor yellowColor];
+    [self.bannerViews loadBannerWithDelegate:self];
+    
+    [self.view addSubview:self.bannerViews];
+    
+}
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
