@@ -419,7 +419,9 @@ static BOOL _disablePushTrack = YES;
             NSString *value = variable[key];
             query = [NSString stringWithFormat:@"%@%@=%@&", query, key, value];
         }
-        query = [query substringToIndex:([query length] - 1)];
+        if (query.length > 0) {
+            query = [query substringToIndex:([query length] - 1)];
+        }
     }
     
     [[GrowingEventManager shareInstance] postEventBuidler:GrowingHybridPageEvent.builder.setPath(pageName).setQuery(query).setTimestamp([GrowingTimeUtil currentTimeMillis])];
