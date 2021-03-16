@@ -23,7 +23,6 @@ PODS:
 DEPENDENCIES:
   - GrowingAnalytics-cdp/Autotracker (~> 3.0.2)
   - GrowingAnalytics-upgrade/Autotracker-upgrade-2to3-cdp (from `./`)
-  - GrowingAnalytics-upgrade/Upgrade-base (from `./`)
   - MBProgressHUD (~> 1.2.0)
   - MJRefresh (~> 3.4.3)
   - SDCycleScrollView (~> 1.75)
@@ -51,6 +50,6 @@ SPEC CHECKSUMS:
   SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
 
-PODFILE CHECKSUM: 4aae7c435e558e77573472ccfb6ecad0f57ec7aa
+PODFILE CHECKSUM: abf0c917231a41f77200748544fcf028781b1ccb
 
 COCOAPODS: 1.9.1
