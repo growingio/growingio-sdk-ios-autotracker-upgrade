@@ -31,6 +31,8 @@ end
 #end
 
 
+# 用于打包空壳,工程在EmptyFramework
+
 target 'GrowingCDPCoreKit' do
   project 'EmptyFramework/EmptyFramework.xcodeproj'
   pod 'GrowingAnalytics-cdp/Autotracker', '~> 3.0.2'

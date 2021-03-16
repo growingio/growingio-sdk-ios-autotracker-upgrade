@@ -31,6 +31,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0411252B26009196000D3A0C /* GrowingTouchCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AD48B425F0DA2F00B93DB0 /* GrowingTouchCoreKit.framework */; };
+		0411256E260093F2000D3A0C /* GrowingTouchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0411256C260093F2000D3A0C /* GrowingTouchKit.framework */; };
+		0411256F260093F2000D3A0C /* GrowingTouchCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0411256D260093F2000D3A0C /* GrowingTouchCoreKit.framework */; };
 		047DBFC92583257B00B9F7A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 047DBFC82583257B00B9F7A1 /* AppDelegate.m */; };
 		047DBFCC2583257B00B9F7A1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 047DBFCB2583257B00B9F7A1 /* SceneDelegate.m */; };
 		047DBFCF2583257B00B9F7A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047DBFCE2583257B00B9F7A1 /* ViewController.m */; };
@@ -43,10 +46,7 @@
 		04AC43EF25B0471D00698C4C /* GrowingCDPCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AC43EE25B0471D00698C4C /* GrowingCDPCoreKit.framework */; };
 		04AD49C325F3346D00B93DB0 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD49C225F3346D00B93DB0 /* NotificationService.m */; };
 		04ADB66A25F721BA00366065 /* GrowingPushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ADB66525F721BA00366065 /* GrowingPushKit.framework */; };
-		04ADB66B25F721BA00366065 /* GrowingTouchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ADB66625F721BA00366065 /* GrowingTouchKit.framework */; };
-		04ADB66C25F721BA00366065 /* GrowingTouchCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ADB66725F721BA00366065 /* GrowingTouchCoreKit.framework */; };
 		04ADB66D25F721BA00366065 /* GrowingTouchBannerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ADB66825F721BA00366065 /* GrowingTouchBannerKit.framework */; };
-		04ADB66E25F721BA00366065 /* GrowingMonitorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ADB66925F721BA00366065 /* GrowingMonitorKit.framework */; };
 		04ADB71525F72BE800366065 /* 2to3-Push.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04AD49BF25F3346D00B93DB0 /* 2to3-Push.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		04ADB73525F731BA00366065 /* GrowingCDPPushExtensionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ADB73425F731BA00366065 /* GrowingCDPPushExtensionKit.framework */; };
 		A836E2B544A0336A6CF73C6A /* libPods-autotracker-upgrade-2to3-cdp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5095D105E20EEA4C4002861 /* libPods-autotracker-upgrade-2to3-cdp.a */; };
@@ -88,6 +88,8 @@
 
 /* Begin PBXFileReference section */
 		00D4D63D1068F3FEF5F89C01 /* Pods-tracker-upgrade-2to3-cdp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tracker-upgrade-2to3-cdp.debug.xcconfig"; path = "Target Support Files/Pods-tracker-upgrade-2to3-cdp/Pods-tracker-upgrade-2to3-cdp.debug.xcconfig"; sourceTree = "<group>"; };
+		0411256C260093F2000D3A0C /* GrowingTouchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GrowingTouchKit.framework; sourceTree = "<group>"; };
+		0411256D260093F2000D3A0C /* GrowingTouchCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GrowingTouchCoreKit.framework; sourceTree = "<group>"; };
 		047DBFC52583257B00B9F7A1 /* autotracker-upgrade-2to3-cdp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "autotracker-upgrade-2to3-cdp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		047DBFC72583257B00B9F7A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		047DBFC82583257B00B9F7A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -114,10 +116,7 @@
 		04AD4BB325F5F23E00B93DB0 /* 2to3-Push.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "2to3-Push.entitlements"; sourceTree = "<group>"; };
 		04AD4BC025F61B7300B93DB0 /* GrowingTouchCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GrowingTouchCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04ADB66525F721BA00366065 /* GrowingPushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GrowingPushKit.framework; sourceTree = "<group>"; };
-		04ADB66625F721BA00366065 /* GrowingTouchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GrowingTouchKit.framework; sourceTree = "<group>"; };
-		04ADB66725F721BA00366065 /* GrowingTouchCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GrowingTouchCoreKit.framework; sourceTree = "<group>"; };
 		04ADB66825F721BA00366065 /* GrowingTouchBannerKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GrowingTouchBannerKit.framework; sourceTree = "<group>"; };
-		04ADB66925F721BA00366065 /* GrowingMonitorKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GrowingMonitorKit.framework; sourceTree = "<group>"; };
 		04ADB67325F7226800366065 /* autotracker-upgrade-2to3-cdp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "autotracker-upgrade-2to3-cdp.entitlements"; sourceTree = "<group>"; };
 		04ADB73425F731BA00366065 /* GrowingCDPPushExtensionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GrowingCDPPushExtensionKit.framework; sourceTree = "<group>"; };
 		07C01C8FEC7F67451C9BF2C7 /* Pods-autotracker-upgrade-2to3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-autotracker-upgrade-2to3.release.xcconfig"; path = "Target Support Files/Pods-autotracker-upgrade-2to3/Pods-autotracker-upgrade-2to3.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,11 +135,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				04AC43EF25B0471D00698C4C /* GrowingCDPCoreKit.framework in Frameworks */,
+				0411256F260093F2000D3A0C /* GrowingTouchCoreKit.framework in Frameworks */,
 				04ADB66D25F721BA00366065 /* GrowingTouchBannerKit.framework in Frameworks */,
-				04ADB66B25F721BA00366065 /* GrowingTouchKit.framework in Frameworks */,
-				04ADB66C25F721BA00366065 /* GrowingTouchCoreKit.framework in Frameworks */,
-				04ADB66E25F721BA00366065 /* GrowingMonitorKit.framework in Frameworks */,
 				04ADB66A25F721BA00366065 /* GrowingPushKit.framework in Frameworks */,
+				0411256E260093F2000D3A0C /* GrowingTouchKit.framework in Frameworks */,
+				0411252B26009196000D3A0C /* GrowingTouchCoreKit.framework in Frameworks */,
 				A836E2B544A0336A6CF73C6A /* libPods-autotracker-upgrade-2to3-cdp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,11 +222,10 @@
 		04ADB66425F721BA00366065 /* CDPTouch1.4.4 */ = {
 			isa = PBXGroup;
 			children = (
+				0411256D260093F2000D3A0C /* GrowingTouchCoreKit.framework */,
+				0411256C260093F2000D3A0C /* GrowingTouchKit.framework */,
 				04ADB66525F721BA00366065 /* GrowingPushKit.framework */,
-				04ADB66625F721BA00366065 /* GrowingTouchKit.framework */,
-				04ADB66725F721BA00366065 /* GrowingTouchCoreKit.framework */,
 				04ADB66825F721BA00366065 /* GrowingTouchBannerKit.framework */,
-				04ADB66925F721BA00366065 /* GrowingMonitorKit.framework */,
 			);
 			path = CDPTouch1.4.4;
 			sourceTree = "<group>";
