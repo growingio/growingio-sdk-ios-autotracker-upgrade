@@ -36,9 +36,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[TrackViewController alloc] init];//设置根视图控制器
+    // To Fix GTouch Handle URL: Your App must contain a navigationController
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[TrackViewController alloc] init]];//设置根视图控制器
     [self.window makeKeyAndVisible];//设置成为主窗口并显示
     
     [Growing upgrade];
@@ -83,24 +83,24 @@ continueUserActivity:(NSUserActivity *)userActivity
 }
 
 - (void)onEventPopupLoadSuccess:(NSString *)trackEventId eventType:(NSString *)eventType {
-//    NSLog(@"%s trackEventId = %@, eventType = %@", __func__, trackEventId, eventType);
+    NSLog(@"%s trackEventId = %@, eventType = %@", __func__, trackEventId, eventType);
 }
 
 - (void)onEventPopupLoadFailed:(NSString *)trackEventId eventType:(NSString *)eventType withError:(NSError *)error {
-//    NSLog(@"%s trackEventId = %@, eventType = %@", __func__, trackEventId, eventType);
+    NSLog(@"%s trackEventId = %@, eventType = %@", __func__, trackEventId, eventType);
 }
 
 - (BOOL)onClickedEventPopup:(NSString *)trackEventId eventType:(NSString *)eventType openUrl:(NSString *)openUrl {
-//    NSLog(@"%s trackEventId = %@, eventType = %@", __func__, trackEventId, eventType);
+    NSLog(@"%s trackEventId = %@, eventType = %@", __func__, trackEventId, eventType);
     return NO;
 }
 
 - (void)onCancelEventPopup:(NSString *)trackEventId eventType:(NSString *)eventType {
-//    NSLog(@"%s trackEventId = %@, eventType = %@", __func__, trackEventId, eventType);
+    NSLog(@"%s trackEventId = %@, eventType = %@", __func__, trackEventId, eventType);
 }
 
 - (void)onTrackEventTimeout:(NSString *)trackEventId eventType:(NSString *)eventType {
-//    NSLog(@"%s trackEventId = %@, eventType = %@", __func__, trackEventId, eventType);
+    NSLog(@"%s trackEventId = %@, eventType = %@", __func__, trackEventId, eventType);
 }
 
 #pragma mark - notification

@@ -31,15 +31,14 @@ end
 #end
 
 
-# 用于打包空壳,工程在EmptyFramework
+# 下述内容: 用于打包空壳,工程在EmptyFramework
 
-target 'GrowingCDPCoreKit' do
-  project 'EmptyFramework/EmptyFramework.xcodeproj'
-  pod 'GrowingAnalytics-cdp/Autotracker', '~> 3.0.2'
-  pod 'GrowingAnalytics-upgrade/Upgrade-base', :path => './'
-end
-#
-#
+#target 'GrowingCDPCoreKit' do
+#  project 'EmptyFramework/EmptyFramework.xcodeproj'
+#  pod 'GrowingAnalytics-cdp/Autotracker', '~> 3.0.2'
+#  pod 'GrowingAnalytics-upgrade/Upgrade-base', :path => './'
+#end
+
 #target 'GrowingCoreKit' do
 #  project 'EmptyFramework/EmptyFramework.xcodeproj'
 #  pod 'GrowingAnalytics/Autotracker', '~> 3.0.2'
