@@ -38,5 +38,5 @@ echo y | pod trunk delete GrowingAnalytics-upgrade $POD_BETA_VERSOIN
 git tag $POD_BETA_VERSOIN
 git push --tags
 
-pod lib lint --allow-warnings --use-libraries
-pod trunk push --allow-warnings --use-libraries
+pod lib lint --allow-warnings --use-libraries --verbose
+pod trunk push --allow-warnings --use-libraries --verbose
