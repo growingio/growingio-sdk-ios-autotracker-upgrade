@@ -30,7 +30,6 @@ TODO: Add long description of the pod here.
   
   s.subspec 'Upgrade-base' do |base|
       base.source_files = 'Upgrade-base/**/*{.h,.m}'
-      base.exclude_files = 'Upgrade-base/2x/HookBase/FoAspectBody.m'
       base.dependency 'GrowingAnalytics-cdp/Autotracker'
       base.dependency 'GrowingAnalytics/AutotrackerCore'
   end

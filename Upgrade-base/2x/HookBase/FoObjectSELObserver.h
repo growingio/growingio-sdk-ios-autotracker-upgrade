@@ -19,13 +19,37 @@ typedef NS_ENUM(NSUInteger, FoObjectSELObserverOption)
     FoObjectSELObserverOptionAddMethod  = 4,
 };
 
-#define CLASS_NAME NSObject
-#include "FoAspectBody.h"
-#undef CLASS_NAME
+@interface NSObject(FoObjectSELObserver)
 
-#define CLASS_NAME NSProxy
-#include "FoAspectBody.h"
-#undef CLASS_NAME
+- (id<FoObjectSELObserverItem>)addFoObserverSelector:(SEL)sel
+                                            template:(void*)templateImp
+                                                type:(FoObjectSELObserverOption)option
+                                       callbackBlock:(id)callbackBlock;
+
+@end
+
+@interface NSObject(FoObjectOriginResultsOfRespondsToSelHelper)
+
+- (BOOL)restoreOriginResultOfRespondsToSelector:(SEL) sel;
+- (void)recordOriginResultOfRespondsToSelector:(SEL) sel;
+
+@end
+
+@interface NSProxy(FoObjectSELObserver)
+
+- (id<FoObjectSELObserverItem>)addFoObserverSelector:(SEL)sel
+                                            template:(void*)templateImp
+                                                type:(FoObjectSELObserverOption)option
+                                       callbackBlock:(id)callbackBlock;
+
+@end
+
+@interface NSProxy(FoObjectOriginResultsOfRespondsToSelHelper)
+
+- (BOOL)restoreOriginResultOfRespondsToSelector:(SEL) sel;
+- (void)recordOriginResultOfRespondsToSelector:(SEL) sel;
+
+@end
 
 @interface NSProxy(FoAspectMimicKVOSubclass)
 
