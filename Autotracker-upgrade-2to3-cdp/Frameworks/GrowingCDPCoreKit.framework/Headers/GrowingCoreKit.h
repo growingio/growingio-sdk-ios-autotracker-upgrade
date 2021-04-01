@@ -16,8 +16,6 @@ API_DEPRECATED("No longer supported; please adopt GrowingTracker.", ios(2.0, 8.0
 + (void)setAspectMode:(GrowingAspectMode)aspectMode;
 + (GrowingAspectMode)getAspectMode;
 
-/// 需要在初始化前调用, 将userId以及deviceId从v2版本迁移到v3版本中
-+ (void)upgrade;
 // 默认为YES
 // 设置为NO可以不采集地理位置的统计信息
 + (void)setEnableLocationTrack:(BOOL)enable;

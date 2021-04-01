@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GrowingAnalytics-upgrade'
-  s.version          = '1.1.0-beta'
+  s.version          = '1.1.1-beta'
   s.summary          = 'GrowingIO SDK udgrade, support for 2.x to 3.x'
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
@@ -30,14 +30,27 @@ TODO: Add long description of the pod here.
   
   s.subspec 'Upgrade-base' do |base|
       base.source_files = 'Upgrade-base/**/*{.h,.m}'
-      base.dependency 'GrowingAnalytics-cdp/Autotracker'
-      base.dependency 'GrowingAnalytics/AutotrackerCore'
+  end
+  
+  s.subspec 'Upgrade-touch' do |touch|
+    touch.source_files = 'Upgrade-touch/**/*{.h,.m}'
+    touch.dependency 'GrowingAnalytics-cdp/Tracker'
+    touch.dependency 'GrowingAnalytics/TrackerCore'
+    touch.vendored_frameworks = 'Upgrade-touch/Frameworks/*.framework'
   end
   
   s.subspec 'Autotracker-upgrade-2to3-cdp' do |autotracker2to3cdp|
-      autotracker2to3cdp.source_files = 'Autotracker-upgrade-2to3-cdp/**/*{.h}'
-      autotracker2to3cdp.dependency 'GrowingAnalytics-upgrade/Upgrade-base'
-      autotracker2to3cdp.vendored_frameworks = 'Autotracker-upgrade-2to3-cdp/Frameworks/*.framework'
+    autotracker2to3cdp.source_files = 'Autotracker-upgrade-2to3-cdp/**/*{.h}'
+    autotracker2to3cdp.dependency 'GrowingAnalytics-upgrade/Upgrade-base'
+    autotracker2to3cdp.dependency 'GrowingAnalytics-upgrade/Upgrade-touch'
+    autotracker2to3cdp.vendored_frameworks = 'Autotracker-upgrade-2to3-cdp/Frameworks/*.framework'
+  end
+  
+  s.subspec 'Tracker-upgrade-2to3-cdp' do |tracker2to3cdp|
+    tracker2to3cdp.source_files = 'Tracker-upgrade-2to3-cdp/**/*{.h}'
+    tracker2to3cdp.dependency 'GrowingAnalytics-upgrade/Upgrade-base'
+    tracker2to3cdp.dependency 'GrowingAnalytics-upgrade/Upgrade-touch'
+    tracker2to3cdp.vendored_frameworks = 'Tracker-upgrade-2to3-cdp/Frameworks/*.framework'
   end
   
 end
