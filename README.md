@@ -18,7 +18,7 @@ GrowingIO Autotracker Upgrade For CDP
 
 1. 2.x to 3.x 版本的迁移
 2. 埋点 to 无埋点
-3. 删除了部分接口
+3. 删除了部分接口,部分老接口废弃无效
 
 ## 集成文档
 
