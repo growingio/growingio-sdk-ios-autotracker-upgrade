@@ -12,6 +12,8 @@ workspace 'GrowingAnalytics-upgrade.xcworkspace'
 
 target 'autotracker-upgrade-2to3-cdp' do
   project 'Example/Example'
+#  pod 'GrowingAnalytics-upgrade/Tracker-upgrade-2to3-cdp', :path => './'
+#  pod 'GrowingAnalytics-cdp/Tracker', '~> 3.0.2'
   pod 'GrowingAnalytics-upgrade/Autotracker-upgrade-2to3-cdp', :path => './'
   pod 'GrowingAnalytics-cdp/Autotracker', '~> 3.0.2'
   pod 'SDCycleScrollView', '~> 1.75'
@@ -32,16 +34,16 @@ end
 
 
 # 下述内容: 用于打包空壳,工程在EmptyFramework
-
+# for Tracker
+#target 'GrowingCDPCoreKit' do
+#  project 'EmptyFramework/EmptyFramework.xcodeproj'
+#  pod 'GrowingAnalytics-cdp/Tracker', '~> 3.0.2'
+#  pod 'GrowingAnalytics-upgrade/Upgrade-touch', :path => './'
+#end
+# for Autotracker
 #target 'GrowingCDPCoreKit' do
 #  project 'EmptyFramework/EmptyFramework.xcodeproj'
 #  pod 'GrowingAnalytics-cdp/Autotracker', '~> 3.0.2'
-#  pod 'GrowingAnalytics-upgrade/Upgrade-base', :path => './'
-#end
-
-#target 'GrowingCoreKit' do
-#  project 'EmptyFramework/EmptyFramework.xcodeproj'
-#  pod 'GrowingAnalytics/Autotracker', '~> 3.0.2'
-#  pod 'GrowingAnalytics-upgrade/Upgrade-base', :path => './'
+#  pod 'GrowingAnalytics-upgrade/Upgrade-touch', :path => './'
 #end
 

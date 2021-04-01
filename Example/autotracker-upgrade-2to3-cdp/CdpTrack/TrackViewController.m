@@ -15,6 +15,7 @@ static NSString *const kGrowingTrackEventAndVar = @"Track Event and Var";
 static NSString *const kGrowingTrackPage = @"Track Page";
 static NSString *const kGrowingTrackPageAndVar = @"Track Page and Var";
 static NSString *const kGrowingGoToWKWebViewVC = @"Go To WKWebView VC";
+static NSString *const kGrowingSwitchUser = @"Switch User";
 
 @interface TrackViewController () <UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic, strong) UITableView *tableView;
@@ -32,7 +33,8 @@ static NSString *const kGrowingGoToWKWebViewVC = @"Go To WKWebView VC";
             kGrowingTrackEventAndVar,
             kGrowingTrackPage,
             kGrowingTrackPageAndVar,
-            kGrowingGoToWKWebViewVC
+            kGrowingGoToWKWebViewVC,
+            kGrowingSwitchUser
     ];
     [self.view addSubview:self.tableView];
     
@@ -98,6 +100,8 @@ static NSString *const kGrowingGoToWKWebViewVC = @"Go To WKWebView VC";
         }];
     } else if ([kGrowingGoToWKWebViewVC isEqualToString:action]) {
         [self.navigationController pushViewController:[[GIOWKWebViewViewController alloc] init] animated:YES];
+    } else if ([kGrowingSwitchUser isEqualToString:action]) {
+        [Growing setUserId:[NSString stringWithFormat:@"userid_%d",arc4random()%100]];
     }
 }
 @end

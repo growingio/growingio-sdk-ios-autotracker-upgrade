@@ -8,11 +8,9 @@
 
 #import "GrowingCoreKit.h"
 #import <UIKit/UIWebView.h>
-#import "GrowingAutotracker.h"
 #import "GrowingConfigurationManager.h"
 #import "GrowingSession.h"
 #import "GrowingEventManager.h"
-#import "GrowingHybridPageEvent.h"
 #import "GrowingTimeUtil.h"
 #import "GrowingLog.h"
 #import "GrowingTTYLogger.h"
@@ -26,7 +24,6 @@
 #import "NSString+GrowingHelper.h"
 #import "GrowingUpgradeDispatcher.h"
 #import "GrowingSession.h"
-#import "GrowingViewControllerLifecycle.h"
 #import "GrowingNotificationDelegateAutotracker.h"
 #import "GrowingNotificationDelegateManager.h"
 #import "GrowingEventManager.h"
@@ -34,9 +31,46 @@
 #import "GrowingDeepLinkHandler.h"
 #import "GrowingAppLifecycle.h"
 
+#import <objc/runtime.h>
+#import <objc/message.h>
+
+#define Autotracker 1
+
+#if Autotracker
+#import "GrowingAutotracker.h"
+#define TrackerClass GrowingAutotracker
+#import "GrowingHybridPageEvent.h"
+#import "GrowingViewControllerLifecycle.h"
+#else
+#import "GrowingTracker.h"
+#define TrackerClass GrowingTracker
+#endif
+
 #define GIOInvalidateMethod GIOLogError(@"%s在 SDK Version 3.0 以上已禁用",__FUNCTION__);
 
 @implementation Growing
+
++ (void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        SEL sel = @selector(startWithConfiguration:launchOptions:);
+#if Autotracker
+        Method method = class_getClassMethod(NSClassFromString(@"GrowingAutotracker"), sel);
+#else
+        Method method = class_getClassMethod(NSClassFromString(@"GrowingTracker"), sel);
+#endif
+        IMP originImp = method_getImplementation(method);
+        method_setImplementation(method, imp_implementationWithBlock(^(id target,id config,NSDictionary* options) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wdeprecated-declarations"
+            [Growing upgradeBefore];
+            void (*tempImp)(id obj, SEL sel,id config,NSDictionary* options) = (void*)originImp;
+            tempImp(target,sel,config,options);
+            [Growing upgradeAfter];
+#pragma clang diagnostic pop//放在文件尾
+        }));
+    });
+}
 
 static NSString *growingBundleId = nil;
 
@@ -89,7 +123,7 @@ static BOOL _enableLog;
 
 + (void)setEnableLog:(BOOL)enableLog {
     _enableLog = enableLog;
-    if ([GrowingAutotracker sharedInstance]) {
+    if ([TrackerClass sharedInstance]) {
         if (_enableLog) {
             [GrowingLog addLogger:[GrowingTTYLogger sharedInstance] withLevel:GrowingLogLevelDebug];
         } else {
@@ -109,13 +143,14 @@ static NSString *kGrowingUserdefault_2xto3x = @"kGrowingUserdefault_2xto3x_cdp";
 #define GROWINGIO_CUSTOM_U_KEY  @"GROWINGIO_CUSTOM_U_KEY"
 
 /// 需要在初始化前调用, 将userId以及deviceId从v2版本迁移到v3版本中
-+ (void)upgrade {
++ (void)upgradeBefore {
     [GrowingNotificationDelegateAutotracker track];
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [[GrowingAppLifecycle sharedInstance] addAppLifecycleDelegate:[GrowingUpgradeDispatcher sharedInstance]];
-        [[GrowingSession currentSession] addUserIdChangedDelegate:[GrowingUpgradeDispatcher sharedInstance]];
+#if Autotracker
         [[GrowingViewControllerLifecycle sharedInstance] addViewControllerLifecycleDelegate:[GrowingUpgradeDispatcher sharedInstance]];
+#endif
         [[GrowingNotificationDelegateManager sharedInstance] addNotificationDelegateObserver:[GrowingUpgradeDispatcher sharedInstance]];
         [[GrowingEventManager shareInstance] addInterceptor:[GrowingUpgradeDispatcher sharedInstance]];
         [[GrowingDeepLinkHandler sharedInstance] addHandlersObject:[GrowingUpgradeDispatcher sharedInstance]];
@@ -155,6 +190,13 @@ static NSString *kGrowingUserdefault_2xto3x = @"kGrowingUserdefault_2xto3x_cdp";
         }
     }
     [[GrowingPersistenceDataProvider sharedInstance] setString:@"1" forKey:kGrowingUserdefault_2xto3x];
+}
+
++ (void)upgradeAfter {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [[GrowingSession currentSession] addUserIdChangedDelegate:[GrowingUpgradeDispatcher sharedInstance]];
+    });
 }
 
 // keychain
@@ -288,11 +330,11 @@ static BOOL _disablePushTrack = YES;
 }
 
 + (NSString *)getDeviceId {
-    return [[GrowingAutotracker sharedInstance] getDeviceId];
+    return [[TrackerClass sharedInstance] getDeviceId];
 }
 
 + (NSString *)getVisitUserId {
-    return [[GrowingAutotracker sharedInstance] getDeviceId];
+    return [[TrackerClass sharedInstance] getDeviceId];
 }
 
 + (NSString *)getSessionId {
@@ -301,11 +343,11 @@ static BOOL _disablePushTrack = YES;
 
 // 埋点相关
 + (void)setUserId:(NSString *)userId {
-    [[GrowingAutotracker sharedInstance] setLoginUserId:userId];
+    [[TrackerClass sharedInstance] setLoginUserId:userId];
 }
 
 + (void)clearUserId {
-    [[GrowingAutotracker sharedInstance] cleanLoginUserId];
+    [[TrackerClass sharedInstance] cleanLoginUserId];
 }
 
 + (void)setEvar:(NSDictionary<NSString *, NSObject *> *)variable {
@@ -362,12 +404,12 @@ static BOOL _disablePushTrack = YES;
 }
 
 + (void)track:(NSString *)eventId {
-    [[GrowingAutotracker sharedInstance] trackCustomEvent:eventId];
+    [[TrackerClass sharedInstance] trackCustomEvent:eventId];
 }
 
 + (void)track:(NSString *)eventId withVariable:(NSDictionary<NSString *, NSObject *> *)variable {
     variable = [self fit3xDictionary:variable];
-    [[GrowingAutotracker sharedInstance] trackCustomEvent:eventId withAttributes:variable];
+    [[TrackerClass sharedInstance] trackCustomEvent:eventId withAttributes:variable];
 }
 
 + (NSDictionary *)fit3xDictionary:(NSDictionary*)variable {
@@ -385,7 +427,7 @@ static BOOL _disablePushTrack = YES;
 + (void)track:(NSString *)eventId
      withItem:(NSString *)itemId
       itemKey:(NSString *)itemKey {
-    [[GrowingAutotracker sharedInstance] trackCustomEvent:eventId itemKey:itemKey itemId:itemId];
+    [[TrackerClass sharedInstance] trackCustomEvent:eventId itemKey:itemKey itemId:itemId];
     
 }
 
@@ -393,7 +435,7 @@ static BOOL _disablePushTrack = YES;
  withVariable:(NSDictionary<NSString *, id> *)variable
       forItem:(NSString *)itemId
       itemKey:(NSString *)itemKey {
-    [[GrowingAutotracker sharedInstance] trackCustomEvent:eventId itemKey:itemKey itemId:itemId withAttributes:variable];
+    [[TrackerClass sharedInstance] trackCustomEvent:eventId itemKey:itemKey itemId:itemId withAttributes:variable];
 }
 
 
@@ -402,6 +444,7 @@ static BOOL _disablePushTrack = YES;
 }
 
 + (void)trackPage:(NSString *)pageName withVariable:(NSDictionary<NSString *, id> *)variable {
+#if Autotracker
     variable = [self fit3xDictionary:variable];
     NSString *newPageName;
     if (![pageName hasPrefix:@"/"]) {
@@ -425,11 +468,14 @@ static BOOL _disablePushTrack = YES;
     }
     
     [[GrowingEventManager shareInstance] postEventBuidler:GrowingHybridPageEvent.builder.setPath(pageName).setQuery(query).setTimestamp([GrowingTimeUtil currentTimeMillis])];
+#else
+    GIOInvalidateMethod
+#endif
 }
 
 + (void)setUserAttributes:(NSDictionary<NSString *, id> *)attributes {
     attributes = [self fit3xDictionary:attributes];
-    [[GrowingAutotracker sharedInstance] setLoginUserAttributes:attributes];
+    [[TrackerClass sharedInstance] setLoginUserAttributes:attributes];
 }
 
 + (void)setUploadExceptionEnable:(BOOL)uploadExceptionEnable {

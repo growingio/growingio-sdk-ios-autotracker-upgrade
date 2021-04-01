@@ -11,7 +11,6 @@
 		047DC04E2587314700B9F7A1 /* GrowingCoreKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 047DC04C2587314700B9F7A1 /* GrowingCoreKit.m */; };
 		04AD4D1425F71AFE00B93DB0 /* GrowingCoreKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD4D1225F71AFE00B93DB0 /* GrowingCoreKit.m */; };
 		04AD4D1525F71AFE00B93DB0 /* GrowingCoreKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 04AD4D1325F71AFE00B93DB0 /* GrowingCoreKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9B723F6E858F5462D75E8EE /* libPods-GrowingCDPCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE4644E2BDAE231A50971B3 /* libPods-GrowingCDPCoreKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9B723F6E858F5462D75E8EE /* libPods-GrowingCDPCoreKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

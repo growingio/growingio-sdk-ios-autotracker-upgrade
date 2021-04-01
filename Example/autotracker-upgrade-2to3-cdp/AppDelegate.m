@@ -21,7 +21,17 @@
 #import "AppDelegate.h"
 #import <UserNotifications/UserNotifications.h>
 #import "Growing.h"
+
+// FIXME: 修改宏以适配测试情况
+// 测试无埋点sdk请设置 Autotracker 1
+// 测试无埋点sdk请设置 Autotracker 0
+#define Autotracker 1
+
+#if Autotracker
 #import "GrowingAutotracker.h"
+#else
+#import "GrowingTracker.h"
+#endif
 #import <GrowingTouchCoreKit/GrowingTouchCoreKit.h>
 #import <GrowingCDPCoreKit/GrowingCoreKit.h>
 //#import "GrowingCoreKit.h"
@@ -41,14 +51,18 @@
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[TrackViewController alloc] init]];//设置根视图控制器
     [self.window makeKeyAndVisible];//设置成为主窗口并显示
     
-    [Growing upgrade];
+    
     GrowingTrackConfiguration *config = [[GrowingTrackConfiguration alloc] initWithProjectId:@"91eaf9b283361032"];
     config.dataSourceId = @"8425024422dec9a6";
     config.debugEnabled = YES;
     config.dataCollectionServerHost = @"https://uat-api.growingio.com";
 //    config.dataCollectionServerHost = @"https://run.mocky.io/v3/08999138-a180-431d-a136-051f3c6bd306";
+#if Autotracker
     [GrowingAutotracker startWithConfiguration:config launchOptions:launchOptions];
-   
+#else
+    [GrowingTracker startWithConfiguration:config launchOptions:launchOptions];
+#endif
+//    [Growing upgrade];
     
 //    [Growing setTrackerHost:@"http://117.50.92.65:8080"];
     [GrowingTouch setServerHost:@"http://cdp.growingio.com"];
@@ -57,6 +71,8 @@
     [GrowingTouch setDebugEnable:YES];
     
     [GrowingTouch setEventPopupDelegate:self];
+    
+    [self registerRemoteNotification];
     return YES;
 }
 
