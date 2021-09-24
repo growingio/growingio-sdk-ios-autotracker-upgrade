@@ -15,7 +15,7 @@ target 'autotracker-upgrade-2to3-cdp' do
 #  pod 'GrowingAnalytics-upgrade/Tracker-upgrade-2to3-cdp', :path => './'
 #  pod 'GrowingAnalytics-cdp/Tracker', '~> 3.0.2'
   pod 'GrowingAnalytics-upgrade/Autotracker-upgrade-2to3-cdp', :path => './'
-  pod 'GrowingAnalytics-cdp/Autotracker', '~> 3.0.2'
+  pod 'GrowingAnalytics-cdp/Autotracker'
   pod 'SDCycleScrollView', '~> 1.75'
   pod 'MJRefresh', '~> 3.4.3'
   pod 'SDWebImage', '~> 5.8.4'

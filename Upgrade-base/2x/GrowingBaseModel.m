@@ -10,7 +10,7 @@
 #import "NSDictionary+GrowingHelper.h"
 #import "NSArray+GrowingHelper.h"
 #import "NSData+GrowingHelper.h"
-#import "GrowingCocoaLumberjack.h"
+#import "GrowingLogger.h"
 #import "GrowingTimeUtil.h"
 
 static NSMutableArray<NSMutableDictionary*> *allTypeInstance = nil;

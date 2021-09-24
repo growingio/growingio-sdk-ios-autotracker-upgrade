@@ -21,7 +21,7 @@
 #import "GrowingCustomTrackEvent.h"
 #import "GrowingLogMacros.h"
 #import "GrowingArgumentChecker.h"
-#import "GrowingCocoaLumberjack.h"
+#import "GrowingLogger.h"
 #import "GrowingSession.h"
 #import "GrowingTimeUtil.h"
 #import "GrowingDeviceInfo.h"

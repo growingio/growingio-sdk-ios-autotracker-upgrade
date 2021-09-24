@@ -20,7 +20,7 @@
 
 #import "NSDictionary+GrowingHelper2x.h"
 #import "GrowingLogMacros.h"
-#import "GrowingCocoaLumberjack.h"
+#import "GrowingLogger.h"
 #import "GrowingGlobal.h"
 
 @implementation NSDictionary (GrowingHelper2x)

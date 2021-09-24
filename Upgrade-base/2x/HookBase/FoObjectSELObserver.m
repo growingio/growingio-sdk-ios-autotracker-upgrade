@@ -14,7 +14,7 @@
 #import "GrowingInstance.h"
 #import "GrowingMediator.h"
 #import <pthread.h>
-#import "GrowingCocoaLumberjack.h"
+#import "GrowingLogger.h"
 #import "GrowingInstance.h"
 #import "GrowingAspect.h"
 

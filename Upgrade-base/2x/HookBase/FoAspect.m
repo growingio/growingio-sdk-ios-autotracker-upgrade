@@ -8,7 +8,7 @@
 
 
 #import "FoAspect.h"
-#import "GrowingCocoaLumberjack.h"
+#import "GrowingLogger.h"
 
 @implementation foAspectIMPItem
 
