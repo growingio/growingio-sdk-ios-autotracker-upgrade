@@ -125,7 +125,7 @@ static NSString *kGrowingUserdefault_2xto3x = @"kGrowingUserdefault_2xto3x";
         [[GrowingSession currentSession] addUserIdChangedDelegate:[GrowingUpgradeDispatcher sharedInstance]];
         [[GrowingViewControllerLifecycle sharedInstance] addViewControllerLifecycleDelegate:[GrowingUpgradeDispatcher sharedInstance]];
         [[GrowingNotificationDelegateManager sharedInstance] addNotificationDelegateObserver:[GrowingUpgradeDispatcher sharedInstance]];
-        [[GrowingEventManager shareInstance] addInterceptor:[GrowingUpgradeDispatcher sharedInstance]];
+        [[GrowingEventManager sharedInstance] addInterceptor:[GrowingUpgradeDispatcher sharedInstance]];
         [[GrowingDeepLinkHandler sharedInstance] addHandlersObject:[GrowingUpgradeDispatcher sharedInstance]];
     });
     
@@ -408,7 +408,7 @@ static BOOL _disablePushTrack = YES;
         query = [query substringToIndex:([query length] - 1)];
     }
     
-    [[GrowingEventManager shareInstance] postEventBuidler:GrowingHybridPageEvent.builder.setPath(pageName).setQuery(query).setTimestamp([GrowingTimeUtil currentTimeMillis])];
+    [[GrowingEventManager sharedInstance] postEventBuidler:GrowingHybridPageEvent.builder.setPath(pageName).setQuery(query).setTimestamp([GrowingTimeUtil currentTimeMillis])];
 }
 
 + (void)setUserAttributes:(NSDictionary<NSString *, id> *)attributes {

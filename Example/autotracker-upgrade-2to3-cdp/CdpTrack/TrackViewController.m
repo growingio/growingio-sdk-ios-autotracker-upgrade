@@ -43,7 +43,7 @@ static NSString *const kGrowingSwitchUser = @"Switch User";
 - (void)addBanner {
     //触达banner
     UIImage* placeholderImage = [UIImage imageNamed:@"suggest1"];
-    self.bannerViews = [GrowingTouchBannerView bannerKey:@"8520ac86ae6b13de"
+    self.bannerViews = [GrowingTouchBannerView bannerKey:@"a54dd678455813a1"
                                              bannerFrame:CGRectMake(0, self.view.bounds.size.height - 220, self.view.bounds.size.width ,220)
                                         placeholderImage:placeholderImage];
     self.bannerViews.bannerViewErrorImage = placeholderImage;

@@ -17,7 +17,7 @@
 #import "GrowingArgumentChecker.h"
 #import "GrowingEventGenerator.h"
 #import "GrowingLogMacros.h"
-#import "GrowingCocoaLumberjack.h"
+#import "GrowingLogger.h"
 #import "GrowingDispatchManager.h"
 #import "GrowingPersistenceDataProvider.h"
 #import "GrowingCdpEventInterceptor.h"
@@ -34,9 +34,9 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
-#define Autotracker 1
+#define GROWING_AUTOTRACKER_CONFIG 0
 
-#if Autotracker
+#if GROWING_AUTOTRACKER_CONFIG
 #import "GrowingAutotracker.h"
 #define TrackerClass GrowingAutotracker
 #import "GrowingHybridPageEvent.h"
@@ -148,11 +148,11 @@ static NSString *kGrowingUserdefault_2xto3x = @"kGrowingUserdefault_2xto3x_cdp";
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [[GrowingAppLifecycle sharedInstance] addAppLifecycleDelegate:[GrowingUpgradeDispatcher sharedInstance]];
-#if Autotracker
+#if GROWING_AUTOTRACKER_CONFIG
         [[GrowingViewControllerLifecycle sharedInstance] addViewControllerLifecycleDelegate:[GrowingUpgradeDispatcher sharedInstance]];
 #endif
         [[GrowingNotificationDelegateManager sharedInstance] addNotificationDelegateObserver:[GrowingUpgradeDispatcher sharedInstance]];
-        [[GrowingEventManager shareInstance] addInterceptor:[GrowingUpgradeDispatcher sharedInstance]];
+        [[GrowingEventManager sharedInstance] addInterceptor:[GrowingUpgradeDispatcher sharedInstance]];
         [[GrowingDeepLinkHandler sharedInstance] addHandlersObject:[GrowingUpgradeDispatcher sharedInstance]];
     });
     NSString *isUpgraded = [[GrowingPersistenceDataProvider sharedInstance] getStringforKey:kGrowingUserdefault_2xto3x];
@@ -444,7 +444,7 @@ static BOOL _disablePushTrack = YES;
 }
 
 + (void)trackPage:(NSString *)pageName withVariable:(NSDictionary<NSString *, id> *)variable {
-#if Autotracker
+#if GROWING_AUTOTRACKER_CONFIG
     variable = [self fit3xDictionary:variable];
     NSString *newPageName;
     if (![pageName hasPrefix:@"/"]) {
@@ -467,7 +467,7 @@ static BOOL _disablePushTrack = YES;
         }
     }
     
-    [[GrowingEventManager shareInstance] postEventBuidler:GrowingHybridPageEvent.builder.setPath(pageName).setQuery(query).setTimestamp([GrowingTimeUtil currentTimeMillis])];
+    [[GrowingEventManager sharedInstance] postEventBuidler:GrowingHybridPageEvent.builder.setPath(pageName).setQuery(query).setTimestamp([GrowingTimeUtil currentTimeMillis])];
 #else
     GIOInvalidateMethod
 #endif
