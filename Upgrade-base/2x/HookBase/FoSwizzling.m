@@ -8,7 +8,7 @@
 
 #import "FoSwizzling.h"
 #import <mach-o/getsect.h>
-#import "GrowingCocoaLumberjack.h"
+#import "GrowingLogger.h"
 
 void* fo_imp_hook_function(Class clazz,
                     SEL   sel,

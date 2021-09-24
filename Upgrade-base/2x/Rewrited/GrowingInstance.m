@@ -21,7 +21,7 @@
 #import "GrowingInstance.h"
 #import "GrowingConfigurationManager.h"
 #import "Growing.h"
-#import "GrowingCocoaLumberjack.h"
+#import "GrowingLogger.h"
 
 
 @implementation GrowingInstance

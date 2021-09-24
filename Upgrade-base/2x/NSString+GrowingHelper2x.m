@@ -20,7 +20,7 @@
 
 #import "NSString+GrowingHelper2x.h"
 #import "GrowingLogMacros.h"
-#import "GrowingCocoaLumberjack.h"
+#import "GrowingLogger.h"
 #import "GrowingGlobal.h"
 @implementation NSString (GrowingHelper2x)
 

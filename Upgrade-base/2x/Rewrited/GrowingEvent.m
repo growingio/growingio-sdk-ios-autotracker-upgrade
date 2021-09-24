@@ -25,7 +25,7 @@
 #import "GROW_KDNetworkInterfaceManager.h"
 #import "GrowingVisitEvent.h"
 #import "GrowingLogMacros.h"
-#import "GrowingCocoaLumberjack.h"
+#import "GrowingLogger.h"
 #import "GrowingGlobal.h"
 @implementation GrowingEvent
 
