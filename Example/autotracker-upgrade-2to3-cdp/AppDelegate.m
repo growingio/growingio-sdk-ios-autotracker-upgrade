@@ -53,9 +53,9 @@
     
     
     GrowingTrackConfiguration *config = [[GrowingTrackConfiguration alloc] initWithProjectId:@"91eaf9b283361032"];
-    config.dataSourceId = @"8425024422dec9a6";
-    config.debugEnabled = YES;
-    config.dataCollectionServerHost = @"https://uat-api.growingio.com";
+    config.dataSourceId = @"ab0e97f5dd1d8111";
+    config.debugEnabled = NO;
+    config.dataCollectionServerHost = @"http://cdp.growingio.com";
 //    config.dataCollectionServerHost = @"https://run.mocky.io/v3/08999138-a180-431d-a136-051f3c6bd306";
 #if Autotracker
     [GrowingAutotracker startWithConfiguration:config launchOptions:launchOptions];
