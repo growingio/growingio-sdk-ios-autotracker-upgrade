@@ -1,3 +1,13 @@
+#  [1.1.3](https://github.com/growingio/growingio-sdk-ios-autotracker-upgrade/compare/1.1.2...1.1.3) (2021-11-22)
+
+* feat: release 1.1.3 [(acff29b)](https://github.com/growingio/growingio-sdk-ios-autotracker-upgrade/commit/acff29ba38befffe36fe437d8b1bb02e54dc888c)
+
+* feat: 添加 PR ISSUE 模板 [(27e524b)](https://github.com/growingio/growingio-sdk-ios-autotracker-upgrade/commit/27e524bb192a519e5f2dbb58137c0494551a33bb)
+
+* fix: 触达扫码弹窗、埋点弹窗异常 [(8664656)](https://github.com/growingio/growingio-sdk-ios-autotracker-upgrade/commit/86646561f1faf3333ec86f6d44c4639b994fe4e0)
+
+  
+
 #  [1.1.2](https://github.com/growingio/growingio-sdk-ios-autotracker-upgrade/compare/1.1.1...1.1.2) (2021-09-26)
 
 * 修改版本号为 1.1.2 ([503911d](https://github.com/growingio/growingio-sdk-ios-autotracker-upgrade/commit/503911d57f1787938237dadfdaa2d6368c3baa06))
