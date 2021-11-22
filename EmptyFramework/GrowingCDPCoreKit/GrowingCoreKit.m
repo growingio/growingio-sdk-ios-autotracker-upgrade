@@ -34,7 +34,7 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
-#define GROWING_AUTOTRACKER_CONFIG 0
+#define GROWING_AUTOTRACKER_CONFIG 1
 
 #if GROWING_AUTOTRACKER_CONFIG
 #import "GrowingAutotracker.h"
@@ -54,7 +54,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         SEL sel = @selector(startWithConfiguration:launchOptions:);
-#if Autotracker
+#if GROWING_AUTOTRACKER_CONFIG
         Method method = class_getClassMethod(NSClassFromString(@"GrowingAutotracker"), sel);
 #else
         Method method = class_getClassMethod(NSClassFromString(@"GrowingTracker"), sel);
