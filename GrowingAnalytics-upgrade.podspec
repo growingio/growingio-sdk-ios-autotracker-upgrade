@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GrowingAnalytics-upgrade'
-  s.version          = '1.1.3'
+  s.version          = '1.1.4'
   s.summary          = 'GrowingIO SDK udgrade, support for 2.x to 3.x'
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
