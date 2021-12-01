@@ -59,6 +59,8 @@
 //    config.dataCollectionServerHost = @"https://run.mocky.io/v3/08999138-a180-431d-a136-051f3c6bd306";
 #if Autotracker
     [GrowingAutotracker startWithConfiguration:config launchOptions:launchOptions];
+    [[GrowingAutotracker sharedInstance] cleanLoginUserId];
+    [[GrowingAutotracker sharedInstance] setLoginUserId:@"11111"];
 #else
     [GrowingTracker startWithConfiguration:config launchOptions:launchOptions];
 #endif

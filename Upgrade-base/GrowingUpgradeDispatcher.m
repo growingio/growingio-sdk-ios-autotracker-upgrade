@@ -91,8 +91,13 @@
 #pragma mark - GrowingUserIdChangedDelegate
 
 - (void)userIdDidChangedFrom:(NSString *)oldUserId to:(NSString *)newUserId {
-    GrowingEBUserIdEvent *setUserIdEvent = [[GrowingEBUserIdEvent alloc] initWithData:@{@"data": newUserId} operateType:GrowingSetUserIdType];
-    [GrowingEventBus send:setUserIdEvent];
+    if (newUserId == nil) {
+        GrowingEBUserIdEvent *setUserIdEvent = [[GrowingEBUserIdEvent alloc] initWithData:nil operateType:GrowingClearUserIdType];
+        [GrowingEventBus send:setUserIdEvent];
+    } else {
+        GrowingEBUserIdEvent *setUserIdEvent = [[GrowingEBUserIdEvent alloc] initWithData:@{@"data": newUserId} operateType:GrowingSetUserIdType];
+        [GrowingEventBus send:setUserIdEvent];
+    }
 }
 
 #pragma mark - GrowingViewControllerLifecycleDelegate
