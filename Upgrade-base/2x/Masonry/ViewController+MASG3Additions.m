@@ -6,7 +6,7 @@
 //
 //
 
-#import "ViewController+MASG3Additions.h"
+#import "Upgrade-base/2x/Masonry/ViewController+MASG3Additions.h"
 
 #ifdef MASG3_VIEW_CONTROLLER
 

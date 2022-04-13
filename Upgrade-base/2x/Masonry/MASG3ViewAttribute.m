@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
-#import "MASG3ViewAttribute.h"
+#import "Upgrade-base/2x/Masonry/MASG3ViewAttribute.h"
 
 @implementation MASG3ViewAttribute
 

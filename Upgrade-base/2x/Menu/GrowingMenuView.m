@@ -6,13 +6,13 @@
 //  Copyright © 2015年 GrowingIO. All rights reserved.
 //
 
-#import "GrowingMenuView.h"
-#import "GrowingMenu.h"
-#import "UIView+GrowingHelperLayout.h"
-#import "GrowingUIConfig.h"
-#import "UIControl+GrowingHelper.h"
-#import "GrowingInstance.h"
-#import "GrowingTimeUtil.h"
+#import "Upgrade-base/2x/Menu/GrowingMenuView.h"
+#import "Upgrade-base/2x/UIView+GrowingHelperLayout.h"
+#import "Upgrade-base/2x/GrowingUIConfig.h"
+#import "Upgrade-base/Public/GrowingInstance.h"
+
+#import "GrowingTrackerCore/Helpers/UIControl+GrowingHelper.h"
+#import "GrowingTrackerCore/Utils/GrowingTimeUtil.h"
 
 @interface GrowingMenuButton()
 @property (nonatomic, weak) GrowingMenuView *hostView;

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 cloudling. All rights reserved.
 //
 
-#import "MASG3Constraint.h"
+#import "Upgrade-base/2x/Masonry/MASG3Constraint.h"
 
 @protocol MASG3ConstraintDelegate;
 

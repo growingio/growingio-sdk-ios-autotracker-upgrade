@@ -6,10 +6,7 @@
 //  Copyright © 2015年 GrowingIO. All rights reserved.
 //
 
-#import "GrowingUIConfig.h"
-
-
-
+#import "Upgrade-base/2x/GrowingUIConfig.h"
 
 static UIColor* growingColorWithARGB(unsigned int argb)
 {

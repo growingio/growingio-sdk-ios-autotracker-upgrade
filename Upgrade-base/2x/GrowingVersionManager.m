@@ -6,8 +6,9 @@
 //  Copyright © 2019 GrowingIO. All rights reserved.
 //
 
-#import "GrowingVersionManager.h"
-#import "NSDictionary+GrowingHelper.h"
+#import "Upgrade-base/2x/GrowingVersionManager.h"
+
+#import "GrowingTrackerCore/Helpers/NSDictionary+GrowingHelper.h"
 
 @implementation GrowingVersionManager
 

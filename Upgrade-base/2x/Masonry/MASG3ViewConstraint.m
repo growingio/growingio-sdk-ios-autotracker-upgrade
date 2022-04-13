@@ -6,11 +6,12 @@
 //  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
-#import "MASG3ViewConstraint.h"
-#import "MASG3Constraint+Private.h"
-#import "MASG3CompositeConstraint.h"
-#import "MASG3LayoutConstraint.h"
-#import "View+MASG3Additions.h"
+#import "Upgrade-base/2x/Masonry/MASG3ViewConstraint.h"
+#import "Upgrade-base/2x/Masonry/MASG3Constraint+Private.h"
+#import "Upgrade-base/2x/Masonry/MASG3CompositeConstraint.h"
+#import "Upgrade-base/2x/Masonry/MASG3LayoutConstraint.h"
+#import "Upgrade-base/2x/Masonry/View+MASG3Additions.h"
+
 #import <objc/runtime.h>
 
 @interface MASG3_VIEW (MASG3Constraints)

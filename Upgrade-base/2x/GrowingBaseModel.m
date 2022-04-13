@@ -6,12 +6,13 @@
 //  Copyright © 2015年 GrowingIO. All rights reserved.
 //
 
-#import "GrowingBaseModel.h"
-#import "NSDictionary+GrowingHelper.h"
-#import "NSArray+GrowingHelper.h"
-#import "NSData+GrowingHelper.h"
-#import "GrowingLogger.h"
-#import "GrowingTimeUtil.h"
+#import "Upgrade-base/2x/GrowingBaseModel.h"
+
+#import "GrowingTrackerCore/Helpers/NSDictionary+GrowingHelper.h"
+#import "GrowingTrackerCore/Helpers/NSArray+GrowingHelper.h"
+#import "GrowingTrackerCore/Helpers/NSData+GrowingHelper.h"
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogger.h"
+#import "GrowingTrackerCore/Utils/GrowingTimeUtil.h"
 
 static NSMutableArray<NSMutableDictionary*> *allTypeInstance = nil;
 static NSMutableDictionary *allAccountIdDict = nil;

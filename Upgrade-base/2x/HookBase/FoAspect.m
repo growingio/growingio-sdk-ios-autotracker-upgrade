@@ -6,9 +6,9 @@
 //  Copyright © 2016年 陈曦. All rights reserved.
 //
 
+#import "Upgrade-base/2x/HookBase/FoAspect.h"
 
-#import "FoAspect.h"
-#import "GrowingLogger.h"
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogger.h"
 
 @implementation foAspectIMPItem
 

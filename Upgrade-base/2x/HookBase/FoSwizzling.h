@@ -6,7 +6,7 @@
 
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
-#import "metamacros.h"
+#import "Upgrade-base/2x/HookBase/metamacros.h"
 
 //#ifdef DEBUG
 //    #define fo_check_hook_function(theSEL,COUNT) _fo_check_hook_function(theSEL,COUNT)

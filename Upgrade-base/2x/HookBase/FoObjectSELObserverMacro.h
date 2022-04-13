@@ -8,7 +8,7 @@
 #define d_FoObjectSELObserverMacro_h
 
 #import <objc/runtime.h>
-#import "metamacros.h"
+#import "Upgrade-base/2x/HookBase/metamacros.h"
 
 
 #define functionDefine(index,varType)   \

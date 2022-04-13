@@ -6,11 +6,12 @@
 //  Copyright © 2019 GrowingIO. All rights reserved.
 //
 
-#import "GrowingEventBus.h"
-#import "GrowingMediator.h"
-#import "GrowingEBEvent.h"
-#import "GrowingEventBusMethodMap.h"
-#import "GrowingDispatchManager.h"
+#import "Upgrade-base/2x/EventBus/GrowingEventBus.h"
+#import "Upgrade-base/2x/EventBus/Event/GrowingEBEvent.h"
+#import "Upgrade-base/2x/GrowingMediator.h"
+#import "Upgrade-base/2x/EventBus/MethodMap/GrowingEventBusMethodMap.h"
+
+#import "GrowingTrackerCore/Thread/GrowingDispatchManager.h"
 
 @implementation GrowingEventBus
 

@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Jonas Budelmann. All rights reserved.
 //
 
-#import "NSArray+MASG3Additions.h"
+#import "Upgrade-base/2x/Masonry/NSArray+MASG3Additions.h"
 
 #ifdef MASG3_SHORTHAND
 

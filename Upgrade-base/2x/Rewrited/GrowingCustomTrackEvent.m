@@ -17,16 +17,16 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
+#import "Upgrade-base/2x/Rewrited/GrowingCustomTrackEvent.h"
+#import "Upgrade-base/2x/Network/GROW_KDNetworkInterfaceManager.h"
+#import "Upgrade-base/2x/GrowingGlobal.h"
 
-#import "GrowingCustomTrackEvent.h"
-#import "GrowingLogMacros.h"
-#import "GrowingArgumentChecker.h"
-#import "GrowingLogger.h"
-#import "GrowingSession.h"
-#import "GrowingTimeUtil.h"
-#import "GrowingDeviceInfo.h"
-#import "GROW_KDNetworkInterfaceManager.h"
-#import "GrowingGlobal.h"
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogMacros.h"
+#import "GrowingTrackerCore/Utils/GrowingArgumentChecker.h"
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogger.h"
+#import "GrowingTrackerCore/Manager/GrowingSession.h"
+#import "GrowingTrackerCore/Utils/GrowingTimeUtil.h"
+#import "GrowingTrackerCore/Utils/GrowingDeviceInfo.h"
 
 @implementation GrowingCustomTrackEvent
 

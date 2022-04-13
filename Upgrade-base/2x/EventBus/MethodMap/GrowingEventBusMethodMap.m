@@ -1,6 +1,7 @@
-#import "GrowingEventBusMethodMap.h"
+#import "Upgrade-base/2x/EventBus/MethodMap/GrowingEventBusMethodMap.h"
 
 @implementation GrowingEventBusMethodMap
+
 + (NSDictionary *)methodMap
 {
 

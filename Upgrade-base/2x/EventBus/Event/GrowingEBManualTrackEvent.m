@@ -6,7 +6,7 @@
 //  Copyright © 2019 GrowingIO. All rights reserved.
 //
 
-#import "GrowingEBManualTrackEvent.h"
+#import "Upgrade-base/2x/EventBus/Event/GrowingEBManualTrackEvent.h"
 
 @implementation GrowingEBManualTrackEvent
 

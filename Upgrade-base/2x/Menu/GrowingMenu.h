@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GrowingWindow.h"
+#import "GrowingTrackerCore/GrowingWindow.h"
 
 @class GrowingMenuView;
 

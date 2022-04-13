@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Jonas Budelmann. All rights reserved.
 //
 
-#import "NSLayoutConstraint+MASG3DebugAdditions.h"
-#import "MASG3Constraint.h"
-#import "MASG3LayoutConstraint.h"
+#import "Upgrade-base/2x/Masonry/NSLayoutConstraint+MASG3DebugAdditions.h"
+#import "Upgrade-base/2x/Masonry/MASG3Constraint.h"
+#import "Upgrade-base/2x/Masonry/MASG3LayoutConstraint.h"
 
 @implementation NSLayoutConstraint (MASG3DebugAdditions)
 

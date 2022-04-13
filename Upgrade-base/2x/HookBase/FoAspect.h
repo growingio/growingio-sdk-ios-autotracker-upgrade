@@ -5,7 +5,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FoAspectPrivate.h"
+#import "Upgrade-base/2x/HookBase/FoAspectPrivate.h"
 
 @protocol FoAspectToken <NSObject>
 - (void)remove;

@@ -24,7 +24,7 @@
 
 // FIXME: 修改宏以适配测试情况
 // 测试无埋点sdk请设置 Autotracker 1
-// 测试无埋点sdk请设置 Autotracker 0
+// 测试埋点sdk请设置 Autotracker 0
 #define Autotracker 1
 
 #if Autotracker
@@ -37,6 +37,7 @@
 //#import "GrowingCoreKit.h"
 #import "GrowingTrackConfiguration+CdpTracker.h"
 #import "TrackViewController.h"
+#import "GrowingToolsKit.h"
 
 @interface AppDelegate ()
 
@@ -51,10 +52,11 @@
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[TrackViewController alloc] init]];//设置根视图控制器
     [self.window makeKeyAndVisible];//设置成为主窗口并显示
     
+    [GrowingToolsKit start];
     
     GrowingTrackConfiguration *config = [[GrowingTrackConfiguration alloc] initWithProjectId:@"91eaf9b283361032"];
     config.dataSourceId = @"ab0e97f5dd1d8111";
-    config.debugEnabled = NO;
+    config.debugEnabled = YES;
     config.dataCollectionServerHost = @"http://cdp.growingio.com";
 //    config.dataCollectionServerHost = @"https://run.mocky.io/v3/08999138-a180-431d-a136-051f3c6bd306";
 #if Autotracker

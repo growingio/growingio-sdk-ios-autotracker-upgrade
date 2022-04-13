@@ -6,12 +6,12 @@
 //  Copyright © 2015年 GrowingIO. All rights reserved.
 //
 
-#import "GrowingInstance.h"
-#import "GrowingMenu.h"
-#import "GrowingMenuView.h"
-#import "GrowingMediator.h"
-#import "MasonryGrowing3rd.h"
-#import "UIView+GrowingHelperLayout.h"
+#import "Upgrade-base/2x/Menu/GrowingMenu.h"
+#import "Upgrade-base/2x/Menu/GrowingMenuView.h"
+#import "Upgrade-base/Public/GrowingInstance.h"
+#import "Upgrade-base/2x/Masonry/MasonryGrowing3rd.h"
+#import "Upgrade-base/2x/GrowingMediator.h"
+#import "Upgrade-base/2x/UIView+GrowingHelperLayout.h"
 
 @interface GrowingMenu()<UIGestureRecognizerDelegate>
 @property (nonatomic, retain) NSMutableArray<GrowingMenuView*> *allViews;

@@ -21,15 +21,17 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
   s.requires_arc = true
   s.default_subspec = "Autotracker-upgrade-2to3-cdp"
-  s.pod_target_xcconfig = { 
-  'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' 
+  s.pod_target_xcconfig = {
+    'HEADER_SEARCH_PATHS' => '"${PODS_TARGET_SRCROOT}" "${PODS_ROOT}/GrowingAnalytics" "${PODS_ROOT}/GrowingAnalytics-cdp"',
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
-  s.user_target_xcconfig = { 
-  'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  s.user_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
   
   s.subspec 'Upgrade-base' do |base|
       base.source_files = 'Upgrade-base/**/*{.h,.m}'
+      base.public_header_files = 'Upgrade-base/Public/*.h'
       base.dependency 'GrowingAnalytics/TrackerCore'
       base.vendored_frameworks = 'Upgrade-base/Frameworks/*.framework'
   end

@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "GrowingMenuView.h"
+
+#import "Upgrade-base/2x/Menu/GrowingMenuView.h"
 
 @interface GrowingHelperMenu : GrowingMenuView
 

@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Jonas Budelmann. All rights reserved.
 //
 
-#import "MASG3LayoutConstraint.h"
+#import "Upgrade-base/2x/Masonry/MASG3LayoutConstraint.h"
 
 @implementation MASG3LayoutConstraint
 

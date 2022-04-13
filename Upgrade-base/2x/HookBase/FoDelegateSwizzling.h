@@ -5,13 +5,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FoSwizzling.h"
-#import "FoObjectSELObserver.h"
-#import "FoWeakObjectShell.h"
-#import <GrowingCoreKit/GrowingCoreKit.h>
-
 #import <objc/runtime.h>
 #import <objc/message.h>
+
+#import "Upgrade-base/2x/HookBase/FoSwizzling.h"
+#import "Upgrade-base/2x/HookBase/FoObjectSELObserver.h"
+#import "Upgrade-base/2x/HookBase/FoWeakObjectShell.h"
+
+#import "GrowingInstance.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunneeded-internal-declaration"
@@ -20,7 +21,7 @@ static BOOL isHookDelegateSuccess(Class aClass)
     if (!aClass) {
         return YES;
     }
-    if ([Growing getAspectMode] == GrowingAspectModeDynamicSwizzling) {
+    if ([GrowingInstance getAspectMode] == GrowingAspectModeDynamicSwizzling) {
         return YES;
     }
     

@@ -17,8 +17,7 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-
-#import "GrowingDeviceInfo+GrowingHelper2x.h"
+#import "Upgrade-base/2x/GrowingDeviceInfo+GrowingHelper2x.h"
 
 @implementation GrowingDeviceInfo (GrowingHelper2x)
 

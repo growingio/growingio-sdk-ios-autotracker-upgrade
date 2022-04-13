@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface GrowingVersionManager : NSObject
 
 + (void)registerVersionInfo:(NSDictionary *)infoDict;

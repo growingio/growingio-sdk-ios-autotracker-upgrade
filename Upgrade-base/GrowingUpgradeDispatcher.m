@@ -17,27 +17,21 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#define Autotracker 0
+#import "Upgrade-base/GrowingUpgradeDispatcher.h"
+#import "Upgrade-base/2x/EventBus/GrowingEventBus.h"
+#import "Upgrade-base/2x/EventBus/Event/GrowingEBApplicationEvent.h"
+#import "Upgrade-base/2x/EventBus/Event/GrowingEBVCLifeEvent.h"
+#import "Upgrade-base/2x/EventBus/Event/GrowingEBManualTrackEvent.h"
+#import "Upgrade-base/2x/EventBus/Event/GrowingEBUserIdEvent.h"
+#import "Upgrade-base/2x/GrowingMediator.h"
 
-#import "GrowingUpgradeDispatcher.h"
-#import "GrowingEBApplicationEvent.h"
-#import "GrowingEventBus.h"
-#import "GrowingAppLifecycle.h"
-#import "GrowingUpgradeDispatcher.h"
-#import "GrowingSession.h"
-
-#import "GrowingEBVCLifeEvent.h"
-#import "GrowingBaseEvent.h"
-#import "GrowingBaseAttributesEvent.h"
-#import "GrowingCustomEvent.h"
-#import "GrowingEBManualTrackEvent.h"
-#import "GrowingEBUserIdEvent.h"
-#import "NSURL+GrowingHelper.h"
-#import "GrowingMediator.h"
-
-#if Autotracker
-#import "GrowingViewControllerLifecycle.h"
-#endif
+#import "GrowingTrackerCore/Hook/GrowingAppLifecycle.h"
+#import "GrowingTrackerCore/Manager/GrowingSession.h"
+#import "GrowingTrackerCore/Public/GrowingBaseEvent.h"
+#import "GrowingTrackerCore/Event/GrowingBaseAttributesEvent.h"
+#import "GrowingTrackerCore/Event/GrowingCustomEvent.h"
+#import "GrowingTrackerCore/Event/GrowingTrackEventType.h"
+#import "GrowingTrackerCore/Helpers/NSURL+GrowingHelper.h"
 
 @interface GrowingUpgradeDispatcher ()<GrowingAppLifecycleDelegate,GrowingUserIdChangedDelegate>
 @end
@@ -206,6 +200,5 @@
     }
     return  NO;
 }
-
 
 @end

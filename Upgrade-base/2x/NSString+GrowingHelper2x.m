@@ -17,11 +17,12 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
+#import "Upgrade-base/2x/NSString+GrowingHelper2x.h"
+#import "Upgrade-base/2x/GrowingGlobal.h"
 
-#import "NSString+GrowingHelper2x.h"
-#import "GrowingLogMacros.h"
-#import "GrowingLogger.h"
-#import "GrowingGlobal.h"
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogMacros.h"
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogger.h"
+
 @implementation NSString (GrowingHelper2x)
 
 //添加Log

@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
-#import "MASG3Constraint.h"
-#import "MASG3Utilities.h"
+#import "Upgrade-base/2x/Masonry/MASG3Constraint.h"
+#import "Upgrade-base/2x/Masonry/MASG3Utilities.h"
 
 typedef NS_OPTIONS(NSInteger, MASG3Attribute) {
     MASG3AttributeLeft = 1 << NSLayoutAttributeLeft,

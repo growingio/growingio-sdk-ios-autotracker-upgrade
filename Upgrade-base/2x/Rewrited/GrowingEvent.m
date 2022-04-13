@@ -17,16 +17,18 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
+#import "Upgrade-base/2x/Rewrited/GrowingEvent.h"
+#import "Upgrade-base/2x/Network/GROW_KDNetworkInterfaceManager.h"
+#import "Upgrade-base/2x/GrowingGlobal.h"
 
-#import "GrowingEvent.h"
-#import "GrowingSession.h"
-#import "GrowingTimeUtil.h"
-#import "GrowingDeviceInfo.h"
-#import "GROW_KDNetworkInterfaceManager.h"
-#import "GrowingVisitEvent.h"
-#import "GrowingLogMacros.h"
-#import "GrowingLogger.h"
-#import "GrowingGlobal.h"
+#import "GrowingTrackerCore/Manager/GrowingSession.h"
+#import "GrowingTrackerCore/Utils/GrowingTimeUtil.h"
+#import "GrowingTrackerCore/Utils/GrowingDeviceInfo.h"
+#import "GrowingTrackerCore/Event/GrowingVisitEvent.h"
+#import "GrowingTrackerCore/Event/GrowingCustomEvent.h"
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogMacros.h"
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogger.h"
+
 @implementation GrowingEvent
 
 - (instancetype)initWithUUID:(NSString*)uuid data:(NSDictionary*)data

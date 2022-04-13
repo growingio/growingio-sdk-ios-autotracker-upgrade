@@ -6,9 +6,10 @@
 //  Copyright (c) 2014年 mafengwo.com. All rights reserved.
 //
 
-#import "UIView+GrowingHelperLayout.h"
-#import "UIControl+GrowingHelper.h"
-#import "UITextField+GrowingHelper.h"
+#import "Upgrade-base/2x/UIView+GrowingHelperLayout.h"
+#import "Upgrade-base/2x/UITextField+GrowingHelper.h"
+
+#import "GrowingTrackerCore/Helpers/UIControl+GrowingHelper.h"
 
 @interface GrowingUIViewAutoResizeMask()
 

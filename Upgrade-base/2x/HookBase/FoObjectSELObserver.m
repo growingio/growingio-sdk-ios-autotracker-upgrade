@@ -7,16 +7,16 @@
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
 #import <objc/message.h>
-
-#import "FoObjectSELObserver.h"
-#import "FoObjectSELObserverMacro.h"
-#import "FoSwizzling.h"
-#import "GrowingInstance.h"
-#import "GrowingMediator.h"
 #import <pthread.h>
-#import "GrowingLogger.h"
-#import "GrowingInstance.h"
-#import "GrowingAspect.h"
+
+#import "Upgrade-base/2x/HookBase/FoObjectSELObserver.h"
+#import "Upgrade-base/2x/HookBase/FoObjectSELObserverMacro.h"
+#import "Upgrade-base/2x/HookBase/FoSwizzling.h"
+#import "Upgrade-base/2x/HookBase/GrowingAspect.h"
+#import "Upgrade-base/Public/GrowingInstance.h"
+#import "Upgrade-base/2x/GrowingMediator.h"
+
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogger.h"
 
 @interface FoObjectSELObserverItem()<FoObjectSELObserverItem>
 

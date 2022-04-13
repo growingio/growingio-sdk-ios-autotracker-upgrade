@@ -17,9 +17,9 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
+#import "Upgrade-base/2x/Rewrited/GrowingCustomField.h"
 
-#import "GrowingCustomField.h"
-#import "GrowingSession.h"
+#import "GrowingTrackerCore/Manager/GrowingSession.h"
 
 @implementation GrowingCustomField
 

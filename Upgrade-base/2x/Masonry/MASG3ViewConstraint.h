@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
-#import "MASG3ViewAttribute.h"
-#import "MASG3Constraint.h"
-#import "MASG3LayoutConstraint.h"
-#import "MASG3Utilities.h"
+#import "Upgrade-base/2x/Masonry/MASG3ViewAttribute.h"
+#import "Upgrade-base/2x/Masonry/MASG3Constraint.h"
+#import "Upgrade-base/2x/Masonry/MASG3LayoutConstraint.h"
+#import "Upgrade-base/2x/Masonry/MASG3Utilities.h"
 
 /**
  *  A single constraint.

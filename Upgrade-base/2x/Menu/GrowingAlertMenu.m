@@ -6,9 +6,9 @@
 //  Copyright © 2015年 GrowingIO. All rights reserved.
 //
 
-#import "GrowingAlertMenu.h"
-#import "UIView+GrowingHelperLayout.h"
-#import "GrowingUIConfig.h"
+#import "Upgrade-base/2x/Menu/GrowingAlertMenu.h"
+#import "Upgrade-base/2x/UIView+GrowingHelperLayout.h"
+#import "Upgrade-base/2x/GrowingUIConfig.h"
 
 @interface GrowingAlertMenu()
 @property (nonatomic, retain) NSArray<GrowingMenuButton*> *buttons;

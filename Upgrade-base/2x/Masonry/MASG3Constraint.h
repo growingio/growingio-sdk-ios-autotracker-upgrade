@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
-#import "MASG3Utilities.h"
+#import "Upgrade-base/2x/Masonry/MASG3Utilities.h"
 
 /**
  *	Enables Constraints to be created with chainable syntax

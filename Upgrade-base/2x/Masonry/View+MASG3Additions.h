@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
-#import "MASG3Utilities.h"
-#import "MASG3ConstraintMaker.h"
-#import "MASG3ViewAttribute.h"
+#import "Upgrade-base/2x/Masonry/MASG3Utilities.h"
+#import "Upgrade-base/2x/Masonry/MASG3ConstraintMaker.h"
+#import "Upgrade-base/2x/Masonry/MASG3ViewAttribute.h"
 
 /**
  *	Provides constraint maker block

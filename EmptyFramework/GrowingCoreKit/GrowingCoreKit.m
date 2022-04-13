@@ -6,32 +6,39 @@
 //  Copyright © 2018年 GrowingIO. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#define GROWING_AUTOTRACKER_CONFIG 1
+
 #import "GrowingCoreKit.h"
-#import "GrowingAutotracker.h"
-#import "GrowingConfigurationManager.h"
-#import "GrowingSession.h"
-#import "GrowingEventManager.h"
-#import "GrowingHybridPageEvent.h"
-#import "GrowingTimeUtil.h"
-#import "GrowingLog.h"
-#import "GrowingTTYLogger.h"
-#import "GrowingArgumentChecker.h"
-#import "GrowingEventGenerator.h"
-#import "GrowingLogMacros.h"
-#import "GrowingCocoaLumberjack.h"
-#import "GrowingDispatchManager.h"
-#import "GrowingPersistenceDataProvider.h"
-#import "NSString+GrowingHelper.h"
-#import "GrowingAppLifecycle.h"
-#import "GrowingUpgradeDispatcher.h"
-#import "GrowingSession.h"
-#import "GrowingViewControllerLifecycle.h"
-#import "GrowingNotificationDelegateAutotracker.h"
-#import "GrowingNotificationDelegateManager.h"
-#import "GrowingEventManager.h"
-#import "GrowingInstance.h"
-#import "GrowingDeepLinkHandler.h"
+#import <UIKit/UIKit.h>
+#import "GrowingTrackerCore/Manager/GrowingConfigurationManager.h"
+#import "GrowingTrackerCore/Manager/GrowingSession.h"
+#import "GrowingTrackerCore/Event/GrowingEventManager.h"
+#import "GrowingTrackerCore/Event/GrowingEventGenerator.h"
+#import "GrowingTrackerCore/Event/Tools/GrowingPersistenceDataProvider.h"
+#import "GrowingTrackerCore/Utils/GrowingTimeUtil.h"
+#import "GrowingTrackerCore/Utils/GrowingArgumentChecker.h"
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingLog.h"
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingTTYLogger.h"
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogMacros.h"
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogger.h"
+#import "GrowingTrackerCore/Thread/GrowingDispatchManager.h"
+#import "GrowingTrackerCore/Hook/GrowingAppLifecycle.h"
+#import "GrowingTrackerCore/Helpers/NSString+GrowingHelper.h"
+#import "GrowingTrackerCore/DeepLink/GrowingDeepLinkHandler.h"
+
+#if GROWING_AUTOTRACKER_CONFIG
+#import "GrowingAutotracker/GrowingAutotracker.h"
+#define TrackerClass GrowingAutotracker
+#import "Modules/Hybrid/Events/GrowingHybridPageEvent.h"
+#import "GrowingAutotrackerCore/Manager/GrowingViewControllerLifecycle.h"
+#else
+#import "GrowingTracker/GrowingTracker.h"
+#define TrackerClass GrowingTracker
+#endif
+
+#import "Upgrade-base/GrowingUpgradeDispatcher.h"
+#import "Upgrade-base/NotificationDelegate/GrowingNotificationDelegateAutotracker.h"
+#import "Upgrade-base/NotificationDelegate/GrowingNotificationDelegateManager.h"
 
 #define GIOInvalidateMethod GIOLogError(@"%s在 SDK Version 3.0 以上已禁用",__FUNCTION__);
 
@@ -388,6 +395,7 @@ static BOOL _disablePushTrack = YES;
 }
 
 + (void)trackPage:(NSString *)pageName withVariable:(NSDictionary<NSString *, id> *)variable {
+#if GROWING_AUTOTRACKER_CONFIG
     variable = [self fit3xDictionary:variable];
     NSString *newPageName;
     if (![pageName hasPrefix:@"/"]) {
@@ -409,6 +417,9 @@ static BOOL _disablePushTrack = YES;
     }
     
     [[GrowingEventManager sharedInstance] postEventBuidler:GrowingHybridPageEvent.builder.setPath(pageName).setQuery(query).setTimestamp([GrowingTimeUtil currentTimeMillis])];
+#else
+    GIOInvalidateMethod
+#endif
 }
 
 + (void)setUserAttributes:(NSDictionary<NSString *, id> *)attributes {

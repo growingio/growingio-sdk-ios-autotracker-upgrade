@@ -4,7 +4,7 @@
 //  Created by Fover0 on 15/8/16.
 //
 
-#import "FoWeakObjectShell.h"
+#import "Upgrade-base/2x/HookBase/FoWeakObjectShell.h"
 
 @implementation FoWeakObjectShell
 

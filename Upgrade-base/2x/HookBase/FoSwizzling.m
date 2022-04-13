@@ -5,10 +5,11 @@
 //
 
 #import <objc/runtime.h>
-
-#import "FoSwizzling.h"
 #import <mach-o/getsect.h>
-#import "GrowingLogger.h"
+
+#import "Upgrade-base/2x/HookBase/FoSwizzling.h"
+
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogger.h"
 
 void* fo_imp_hook_function(Class clazz,
                     SEL   sel,

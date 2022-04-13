@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
-#import "MASG3Utilities.h"
+#import "Upgrade-base/2x/Masonry/MASG3Utilities.h"
 
 /**
  *  An immutable tuple which stores the view and the related NSLayoutAttribute.
