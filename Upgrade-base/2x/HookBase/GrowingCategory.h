@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
-#import "metamacros.h"
+#import "Upgrade-base/2x/HookBase/metamacros.h"
 
 // 嵌套遍历宏 检查混淆
 #if DEBUG

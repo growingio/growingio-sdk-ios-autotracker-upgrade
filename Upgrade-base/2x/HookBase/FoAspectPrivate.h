@@ -5,7 +5,7 @@
 //
 
 #import <objc/runtime.h>
-#import "metamacros.h"
+#import "Upgrade-base/2x/HookBase/metamacros.h"
 
 @protocol FoAspectToken;
 

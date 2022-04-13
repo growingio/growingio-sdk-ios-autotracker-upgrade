@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
-#import "MASG3CompositeConstraint.h"
-#import "MASG3Constraint+Private.h"
+#import "Upgrade-base/2x/Masonry/MASG3CompositeConstraint.h"
+#import "Upgrade-base/2x/Masonry/MASG3Constraint+Private.h"
 
 @interface MASG3CompositeConstraint () <MASG3ConstraintDelegate>
 

@@ -6,5 +6,5 @@
 //  Copyright © 2016年 GrowingIO. All rights reserved.
 //
 
-#import "GrowingAspect.h"
+#import "Upgrade-base/2x/HookBase/GrowingAspect.h"
 

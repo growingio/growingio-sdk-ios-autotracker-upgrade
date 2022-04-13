@@ -17,14 +17,14 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
+#import "Upgrade-base/Public/GrowingInstance.h"
+#import "Upgrade-base/Public/Growing.h"
 
-#import "GrowingInstance.h"
-#import "GrowingConfigurationManager.h"
-#import "Growing.h"
-#import "GrowingLogger.h"
-
+#import "GrowingTrackerCore/Manager/GrowingConfigurationManager.h"
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogger.h"
 
 @implementation GrowingInstance
+
 + (instancetype)sharedInstance
 {
     static GrowingInstance *instance = nil;

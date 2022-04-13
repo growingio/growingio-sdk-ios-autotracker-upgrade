@@ -6,8 +6,7 @@
 //  Copyright © 2015年 GrowingIO. All rights reserved.
 //
 
-
-#import "GrowingUIHeader.h"
+#import "Upgrade-base/2x/GrowingUIHeader.h"
 
 #define C_R_G_B_A(r,g,b,a)  [UIColor colorWithRed:r / 255.0f green:g / 255.0 blue:b / 255.0 alpha:a]
 #define C_R_G_B(r,g,b)      C_R_G_B_A(r,g,b,1)

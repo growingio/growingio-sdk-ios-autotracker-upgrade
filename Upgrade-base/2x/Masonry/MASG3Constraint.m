@@ -5,8 +5,8 @@
 //  Created by Nick Tymchenko on 1/20/14.
 //
 
-#import "MASG3Constraint.h"
-#import "MASG3Constraint+Private.h"
+#import "Upgrade-base/2x/Masonry/MASG3Constraint.h"
+#import "Upgrade-base/2x/Masonry/MASG3Constraint+Private.h"
 
 #define MASG3MethodNotImplemented() \
     @throw [NSException exceptionWithName:NSInternalInconsistencyException \

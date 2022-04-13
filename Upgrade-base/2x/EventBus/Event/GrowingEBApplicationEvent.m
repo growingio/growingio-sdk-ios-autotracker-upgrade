@@ -6,7 +6,7 @@
 //  Copyright © 2019 GrowingIO. All rights reserved.
 //
 
-#import "GrowingEBApplicationEvent.h"
+#import "Upgrade-base/2x/EventBus/Event/GrowingEBApplicationEvent.h"
 
 @implementation GrowingEBApplicationEvent
 

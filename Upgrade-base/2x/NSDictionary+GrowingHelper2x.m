@@ -17,11 +17,11 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
+#import "Upgrade-base/2x/NSDictionary+GrowingHelper2x.h"
+#import "Upgrade-base/2x/GrowingGlobal.h"
 
-#import "NSDictionary+GrowingHelper2x.h"
-#import "GrowingLogMacros.h"
-#import "GrowingLogger.h"
-#import "GrowingGlobal.h"
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogMacros.h"
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogger.h"
 
 @implementation NSDictionary (GrowingHelper2x)
 

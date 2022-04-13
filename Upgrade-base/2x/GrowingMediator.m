@@ -6,7 +6,7 @@
 //  Copyright © 2018年 GrowingIO. All rights reserved.
 //
 
-#import "GrowingMediator.h"
+#import "Upgrade-base/2x/GrowingMediator.h"
 #import <objc/runtime.h>
 
 @interface GrowingMediator ()

@@ -1,6 +1,0 @@
-framework module GrowingMonitorKit {
-  umbrella header "GrowingMonitorKit.h"
-
-  export *
-  module * { export * }
-}

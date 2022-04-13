@@ -28,5 +28,4 @@
  */
 - (id)performTarget:(NSObject *)target action:(NSString *)actionName params:(NSDictionary *)params;
 
-
 @end

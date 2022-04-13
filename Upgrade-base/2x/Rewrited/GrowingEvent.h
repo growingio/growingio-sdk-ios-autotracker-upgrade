@@ -17,10 +17,11 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-
 #import <Foundation/Foundation.h>
-#import "GrowingCustomEvent.h"
+
 NS_ASSUME_NONNULL_BEGIN
+
+@class GrowingBaseBuilder;
 
 @interface GrowingEvent : NSObject
 

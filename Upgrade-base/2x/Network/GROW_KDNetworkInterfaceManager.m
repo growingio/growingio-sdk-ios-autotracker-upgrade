@@ -6,10 +6,11 @@
 //  Copyright (c) 2015 GrowinIO. All rights reserved.
 //
 
-#import "GROW_KDNetworkInterfaceManager.h"
-#import "GrowingReachability.h"
-#import "GrowingInstance.h"
-#import "GrowingConfigurationManager.h"
+#import "Upgrade-base/2x/Network/GROW_KDNetworkInterfaceManager.h"
+#import "Upgrade-base/Public/GrowingInstance.h"
+
+#import "GrowingTrackerCore/Thirdparty/Reachability/GrowingReachability.h"
+#import "GrowingTrackerCore/Manager/GrowingConfigurationManager.h"
 
 @interface GROW_KDNetworkInterfaceManager()
 @property (nonatomic, retain) GrowingReachability * internetReachability;

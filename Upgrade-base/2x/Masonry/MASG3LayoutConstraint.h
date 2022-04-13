@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Jonas Budelmann. All rights reserved.
 //
 
-#import "MASG3Utilities.h"
+#import "Upgrade-base/2x/Masonry/MASG3Utilities.h"
 
 /**
  *	When you are debugging or printing the constraints attached to a view this subclass

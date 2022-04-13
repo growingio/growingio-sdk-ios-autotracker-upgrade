@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FoAspect.h"
-#import "FoObjectSELObserver.h"
-#import "metamacros.h"
 
+#import "Upgrade-base/2x/HookBase/FoAspect.h"
+#import "Upgrade-base/2x/HookBase/FoObjectSELObserver.h"
+#import "Upgrade-base/2x/HookBase/metamacros.h"
 #import "GrowingInstance.h"
 
 #define _GrowingAspectForeachParam(paramMacro,...)                                                                                   \

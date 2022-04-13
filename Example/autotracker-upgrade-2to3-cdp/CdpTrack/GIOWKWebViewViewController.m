@@ -8,7 +8,7 @@
 #import "Growing.h"
 
 
-static NSString *const kGrowingLoadUrl = @"https://release-messages.growingio.cn/push/cdp/webcircel.html";
+static NSString *const kGrowingLoadUrl = @"http://release-messages.growingio.cn/push/cdp/webcircel.html";
 
 @implementation GIOWKWebViewViewController
 - (void)viewDidLoad {

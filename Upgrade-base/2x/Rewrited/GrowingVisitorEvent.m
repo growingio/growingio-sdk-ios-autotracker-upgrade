@@ -17,9 +17,7 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-
-#import "GrowingVisitorEvent.h"
-
+#import "Upgrade-base/2x/Rewrited/GrowingVisitorEvent.h"
 
 @implementation GrowingVisitorEvent
 
@@ -32,6 +30,5 @@
 - (NSString*)eventTypeKey {
     return @"vstr";
 }
-
 
 @end

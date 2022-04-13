@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
-#import "View+MASG3Additions.h"
+#import "Upgrade-base/2x/Masonry/View+MASG3Additions.h"
 #import <objc/runtime.h>
 
 @implementation MASG3_VIEW (MASG3Additions)

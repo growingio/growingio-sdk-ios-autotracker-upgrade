@@ -5,7 +5,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FoObjectSELObserverMacro.h"
+#import "Upgrade-base/2x/HookBase/FoObjectSELObserverMacro.h"
 
 @protocol FoObjectSELObserverItem <NSObject>
 - (void)remove;

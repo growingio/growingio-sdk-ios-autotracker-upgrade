@@ -6,8 +6,7 @@
 //  Copyright © 2019 GrowingIO. All rights reserved.
 //
 
-#import "GrowingEBEvent.h"
-
+#import "Upgrade-base/2x/EventBus/Event/GrowingEBEvent.h"
 
 @interface GrowingEBTrackSelfEvent : GrowingEBEvent
 

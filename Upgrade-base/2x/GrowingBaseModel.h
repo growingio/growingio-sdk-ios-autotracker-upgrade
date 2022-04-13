@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-#import "GrowingNetworkConfig.h"
+#import "GrowingTrackerCore/Network/Request/GrowingNetworkConfig.h"
 
 typedef void ( ^GROWNetworkSuccessBlock ) ( NSHTTPURLResponse *httpResponse , NSData *data);
 typedef void ( ^GROWNetworkFailureBlock ) ( NSHTTPURLResponse *httpResponse , NSData *data, NSError *error );

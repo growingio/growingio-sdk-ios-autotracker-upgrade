@@ -6,7 +6,7 @@
 //  Copyright © 2019 GrowingIO. All rights reserved.
 //
 
-#import "GrowingEBUserIdEvent.h"
+#import "Upgrade-base/2x/EventBus/Event/GrowingEBUserIdEvent.h"
 
 @implementation GrowingEBUserIdEvent
 

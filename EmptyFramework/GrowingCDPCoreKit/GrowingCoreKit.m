@@ -6,45 +6,43 @@
 //  Copyright © 2018年 GrowingIO. All rights reserved.
 //
 
+#define GROWING_AUTOTRACKER_CONFIG 1
+
 #import "GrowingCoreKit.h"
-#import <UIKit/UIWebView.h>
-#import "GrowingConfigurationManager.h"
-#import "GrowingSession.h"
-#import "GrowingEventManager.h"
-#import "GrowingTimeUtil.h"
-#import "GrowingLog.h"
-#import "GrowingTTYLogger.h"
-#import "GrowingArgumentChecker.h"
-#import "GrowingEventGenerator.h"
-#import "GrowingLogMacros.h"
-#import "GrowingLogger.h"
-#import "GrowingDispatchManager.h"
-#import "GrowingPersistenceDataProvider.h"
-#import "GrowingCdpEventInterceptor.h"
-#import "NSString+GrowingHelper.h"
-#import "GrowingUpgradeDispatcher.h"
-#import "GrowingSession.h"
-#import "GrowingNotificationDelegateAutotracker.h"
-#import "GrowingNotificationDelegateManager.h"
-#import "GrowingEventManager.h"
-#import "GrowingInstance.h"
-#import "GrowingDeepLinkHandler.h"
-#import "GrowingAppLifecycle.h"
+#import <UIKit/UIKit.h>
+#import "GrowingTrackerCore/Manager/GrowingConfigurationManager.h"
+#import "GrowingTrackerCore/Manager/GrowingSession.h"
+#import "GrowingTrackerCore/Event/GrowingEventManager.h"
+#import "GrowingTrackerCore/Event/GrowingEventGenerator.h"
+#import "GrowingTrackerCore/Event/Tools/GrowingPersistenceDataProvider.h"
+#import "GrowingTrackerCore/Utils/GrowingTimeUtil.h"
+#import "GrowingTrackerCore/Utils/GrowingArgumentChecker.h"
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingLog.h"
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingTTYLogger.h"
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogMacros.h"
+#import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogger.h"
+#import "GrowingTrackerCore/Thread/GrowingDispatchManager.h"
+#import "GrowingTrackerCore/Hook/GrowingAppLifecycle.h"
+#import "GrowingTrackerCore/Helpers/NSString+GrowingHelper.h"
+#import "GrowingTrackerCore/DeepLink/GrowingDeepLinkHandler.h"
+#import "GrowingTrackerCore-cdp/GrowingCdpEventInterceptor.h"
+
+#if GROWING_AUTOTRACKER_CONFIG
+#import "GrowingAutotracker-cdp/GrowingAutotracker.h"
+#define TrackerClass GrowingAutotracker
+#import "Modules/Hybrid/Events/GrowingHybridPageEvent.h"
+#import "GrowingAutotrackerCore/Manager/GrowingViewControllerLifecycle.h"
+#else
+#import "GrowingTracker-cdp/GrowingTracker.h"
+#define TrackerClass GrowingTracker
+#endif
+
+#import "Upgrade-base/GrowingUpgradeDispatcher.h"
+#import "Upgrade-base/NotificationDelegate/GrowingNotificationDelegateAutotracker.h"
+#import "Upgrade-base/NotificationDelegate/GrowingNotificationDelegateManager.h"
 
 #import <objc/runtime.h>
 #import <objc/message.h>
-
-#define GROWING_AUTOTRACKER_CONFIG 1
-
-#if GROWING_AUTOTRACKER_CONFIG
-#import "GrowingAutotracker.h"
-#define TrackerClass GrowingAutotracker
-#import "GrowingHybridPageEvent.h"
-#import "GrowingViewControllerLifecycle.h"
-#else
-#import "GrowingTracker.h"
-#define TrackerClass GrowingTracker
-#endif
 
 #define GIOInvalidateMethod GIOLogError(@"%s在 SDK Version 3.0 以上已禁用",__FUNCTION__);
 

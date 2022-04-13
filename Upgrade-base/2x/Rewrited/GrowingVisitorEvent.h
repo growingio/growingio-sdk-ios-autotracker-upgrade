@@ -17,15 +17,14 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-
-#import "GrowingEvent.h"
+#import "Upgrade-base/2x/Rewrited/GrowingEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GrowingVisitorEvent : GrowingEvent
 
-
 - (instancetype _Nullable )initWithVisitorVariable:(NSDictionary<NSString *, NSObject *> *_Nullable)variable;
+
 @end
 
 NS_ASSUME_NONNULL_END

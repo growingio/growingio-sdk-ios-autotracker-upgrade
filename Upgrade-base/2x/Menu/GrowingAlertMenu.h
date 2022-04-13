@@ -6,7 +6,7 @@
 //  Copyright © 2015年 GrowingIO. All rights reserved.
 //
 
-#import "GrowingMenuView.h"
+#import "Upgrade-base/2x/Menu/GrowingMenuView.h"
 
 @interface GrowingAlertMenu : GrowingMenuView
 

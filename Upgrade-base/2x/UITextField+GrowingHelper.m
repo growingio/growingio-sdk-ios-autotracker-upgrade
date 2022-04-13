@@ -6,8 +6,7 @@
 //  Copyright © 2015年 GrowingIO. All rights reserved.
 //
 
-#import "UITextField+GrowingHelper.h"
-
+#import "Upgrade-base/2x/UITextField+GrowingHelper.h"
 
 @implementation GrowingHelperTextField
 

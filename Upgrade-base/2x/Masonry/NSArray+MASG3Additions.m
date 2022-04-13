@@ -6,8 +6,8 @@
 //
 //
 
-#import "NSArray+MASG3Additions.h"
-#import "View+MASG3Additions.h"
+#import "Upgrade-base/2x/Masonry/NSArray+MASG3Additions.h"
+#import "Upgrade-base/2x/Masonry/View+MASG3Additions.h"
 
 @implementation NSArray (MASG3Additions)
 

@@ -17,9 +17,10 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
+#import "Upgrade-base/2x/Rewrited/GrowingEventManager+Growing2x.h"
 
-#import "GrowingEventManager+Growing2x.h"
-#import "GrowingEventGenerator.h"
+#import "GrowingTrackerCore/Event/GrowingEventGenerator.h"
+
 @implementation GrowingEventManager (Growing2x)
 
 - (void)addEvent:(GrowingEvent *)event

@@ -10,7 +10,7 @@
 #import <WebKit/WebKit.h>
 #import "GrowingInstance.h"
 
-API_DEPRECATED("No longer supported; please adopt GrowingTracker.", ios(2.0, 8.0)) @interface Growing : NSObject
+API_DEPRECATED("No longer supported; please adopt GrowingAutotracker.", ios(2.0, 8.0)) @interface Growing : NSObject
 
 // 该函数请在main函数第一行调用 APP启动后 将不允许修改采集模式
 + (void)setAspectMode:(GrowingAspectMode)aspectMode;

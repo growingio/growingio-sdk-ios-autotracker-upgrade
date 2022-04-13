@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GrowingMenu.h"
+#import "Upgrade-base/2x/Menu/GrowingMenu.h"
 
 @class GrowingMenuView;
 

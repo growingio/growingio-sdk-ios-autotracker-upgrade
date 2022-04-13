@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MasonryGrowing3rd.h"
+#import "Upgrade-base/2x/Masonry/MasonryGrowing3rd.h"
 
 @interface GrowingUIViewAutoResizeMask : NSObject
 @property (nonatomic, readonly) GrowingUIViewAutoResizeMask *left;

@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface GrowingEBEvent : NSObject
 
 @property (nonatomic, strong, readonly) NSDictionary *dataDict;

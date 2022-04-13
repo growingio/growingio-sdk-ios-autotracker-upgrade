@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "UIView+GrowingHelperLayout.h"
-#import "UITextField+GrowingHelper.h"
-#import "UIControl+GrowingHelper.h"
-#import "GrowingAlertMenu.h"
+#import "Upgrade-base/2x/UIView+GrowingHelperLayout.h"
+#import "Upgrade-base/2x/UITextField+GrowingHelper.h"
+#import "Upgrade-base/2x/Menu/GrowingAlertMenu.h"
+
+#import "GrowingTrackerCore/Helpers/UIControl+GrowingHelper.h"
 

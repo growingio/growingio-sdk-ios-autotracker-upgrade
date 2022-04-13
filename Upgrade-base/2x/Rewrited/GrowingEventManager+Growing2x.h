@@ -17,9 +17,9 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
+#import "GrowingTrackerCore/Event/GrowingEventManager.h"
 
-#import "GrowingEventManager.h"
-#import "GrowingEvent.h"
+#import "Upgrade-base/2x/Rewrited/GrowingEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
