@@ -33,14 +33,12 @@ TODO: Add long description of the pod here.
   end
   
   s.subspec 'Autotracker-upgrade-2to3-cdp' do |autotracker2to3cdp|
-    autotracker2to3cdp.source_files = 'Autotracker-upgrade-2to3-cdp/**/*{.h}'
     autotracker2to3cdp.dependency 'GrowingAnalytics-upgrade/Upgrade-base'
     autotracker2to3cdp.dependency 'GrowingAnalytics-cdp/Autotracker'
     autotracker2to3cdp.vendored_frameworks = 'Autotracker-upgrade-2to3-cdp/Frameworks/*.xcframework'
   end
   
   s.subspec 'Tracker-upgrade-2to3-cdp' do |tracker2to3cdp|
-    tracker2to3cdp.source_files = 'Tracker-upgrade-2to3-cdp/**/*{.h}'
     tracker2to3cdp.dependency 'GrowingAnalytics-upgrade/Upgrade-base'
     tracker2to3cdp.dependency 'GrowingAnalytics-cdp/Tracker'
     tracker2to3cdp.vendored_frameworks = 'Tracker-upgrade-2to3-cdp/Frameworks/*.xcframework'
