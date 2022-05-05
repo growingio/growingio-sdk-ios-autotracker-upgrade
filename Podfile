@@ -14,7 +14,7 @@ target 'autotracker-upgrade-2to3-cdp' do
   project 'Example/Example'
 #  pod 'GrowingAnalytics-upgrade/Tracker-upgrade-2to3-cdp', :path => './'
 #  pod 'GrowingAnalytics-cdp/Tracker'
-  pod 'GrowingAnalytics-cdp/Autotracker', '3.3.5'
+  pod 'GrowingAnalytics-cdp/Autotracker'
   pod 'GrowingAnalytics-upgrade/Autotracker-upgrade-2to3-cdp', :path => './'
   pod 'GrowingToolsKit'
 end

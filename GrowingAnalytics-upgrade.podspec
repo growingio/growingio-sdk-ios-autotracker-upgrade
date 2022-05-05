@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GrowingAnalytics-upgrade'
-  s.version          = '1.1.5'
+  s.version          = '1.1.6-beta'
   s.summary          = 'GrowingIO SDK udgrade, support for 2.x to 3.x'
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
@@ -22,32 +22,28 @@ TODO: Add long description of the pod here.
   s.requires_arc = true
   s.default_subspec = "Autotracker-upgrade-2to3-cdp"
   s.pod_target_xcconfig = {
-    'HEADER_SEARCH_PATHS' => '"${PODS_TARGET_SRCROOT}" "${PODS_ROOT}/GrowingAnalytics" "${PODS_ROOT}/GrowingAnalytics-cdp"',
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
-  }
-  s.user_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+    'HEADER_SEARCH_PATHS' => '"${PODS_TARGET_SRCROOT}" "${PODS_ROOT}/GrowingAnalytics" "${PODS_ROOT}/GrowingAnalytics-cdp"'
   }
   
   s.subspec 'Upgrade-base' do |base|
       base.source_files = 'Upgrade-base/**/*{.h,.m}'
       base.public_header_files = 'Upgrade-base/Public/*.h'
       base.dependency 'GrowingAnalytics/TrackerCore'
-      base.vendored_frameworks = 'Upgrade-base/Frameworks/*.framework'
+      base.vendored_frameworks = 'Upgrade-base/Frameworks/*.xcframework'
   end
   
   s.subspec 'Autotracker-upgrade-2to3-cdp' do |autotracker2to3cdp|
     autotracker2to3cdp.source_files = 'Autotracker-upgrade-2to3-cdp/**/*{.h}'
     autotracker2to3cdp.dependency 'GrowingAnalytics-upgrade/Upgrade-base'
     autotracker2to3cdp.dependency 'GrowingAnalytics-cdp/Autotracker'
-    autotracker2to3cdp.vendored_frameworks = 'Autotracker-upgrade-2to3-cdp/Frameworks/*.framework'
+    autotracker2to3cdp.vendored_frameworks = 'Autotracker-upgrade-2to3-cdp/Frameworks/*.xcframework'
   end
   
   s.subspec 'Tracker-upgrade-2to3-cdp' do |tracker2to3cdp|
     tracker2to3cdp.source_files = 'Tracker-upgrade-2to3-cdp/**/*{.h}'
     tracker2to3cdp.dependency 'GrowingAnalytics-upgrade/Upgrade-base'
     tracker2to3cdp.dependency 'GrowingAnalytics-cdp/Tracker'
-    tracker2to3cdp.vendored_frameworks = 'Tracker-upgrade-2to3-cdp/Frameworks/*.framework'
+    tracker2to3cdp.vendored_frameworks = 'Tracker-upgrade-2to3-cdp/Frameworks/*.xcframework'
   end
   
 end
