@@ -22,21 +22,36 @@ end
 
 4. 打包 **Tracker** 版本，在 GrowingCDPCoreKit/GrowingCoreKit.m 文件中，将 GROWING_AUTOTRACKER_CONFIG 值修改为 **0**
 5. 然后进行 pod install，再进行编译名为 GrowingCDPCoreKit 的 Target，分别编译真机以及模拟器版本(Command + B)，编译模拟器版本需在 Build Phases -> Link Binary With Libraries 删除 libPods-GrowingCDPCoreKit.a，避免编译时报错
-6. 使用 lipo -create 真机版本 模拟器版本 -output 生成最终版本，这里需要指定文件名，给出一个示例：
+6. 使用 xcodebuild -create-xcframework <真机 framework\> <模拟器 framework\> -output 生成 xcframework，这里需要指定文件名，给出一个示例：
 
 ```
-lipo -create /Users/sheng/Library/Developer/Xcode/DerivedData/GrowingAnalytics-upgrade-cxomsenmvudvngcanoifhendqyki/Build/Products/Release-iphoneos/GrowingCDPCoreKit.framework/GrowingCDPCoreKit /Users/sheng/Library/Developer/Xcode/DerivedData/GrowingAnalytics-upgrade-cxomsenmvudvngcanoifhendqyki/Build/Products/Release-iphonesimulator/GrowingCDPCoreKit.framework/GrowingCDPCoreKit -output /Users/sheng/Library/Developer/Xcode/DerivedData/GrowingAnalytics-upgrade-cxomsenmvudvngcanoifhendqyki/Build/Products/out/GrowingCDPCoreKit
+xcodebuild -create-xcframework \
+-framework <iPhone OS framework 路径> \
+-framework <iPhone simulator framework 路径> \
+-output GrowingCDPCoreKit.xcframework
 ```
 
-7. 使用lipo -info 查看架构信息，符合要求则继续（armv7 i386 x86_64 arm64）
+7. 使用 Finder 或 tree 指令查看架构信息，符合要求则继续（ios-**arm64_armv7** 以及 ios-**arm64_i386_x86_64**-simulator），**另外，可删除 ios-arm64_i386_x86_64-simulator/GrowingCDPCoreKit.framework 目录下生成的无用签名相关文件**
 
 ```
-lipo -info /Users/sheng/Library/Developer/Xcode/DerivedData/GrowingAnalytics-upgrade-cxomsenmvudvngcanoifhendqyki/Build/Products/out/GrowingCDPCoreKit
-Architectures in the fat file: /Users/sheng/Library/Developer/Xcode/DerivedData/GrowingAnalytics-upgrade-cxomsenmvudvngcanoifhendqyki/Build/Products/out/GrowingCDPCoreKit are: armv7 i386 x86_64 arm64
+GrowingCDPCoreKit.xcframework/
+├── Info.plist
+├── ios-arm64_armv7
+│   └── GrowingCDPCoreKit.framework
+│       ├── GrowingCDPCoreKit
+│       ├── Headers
+│       │   └── GrowingCoreKit.h
+│       └── Info.plist
+└── ios-arm64_i386_x86_64-simulator
+    └── GrowingCDPCoreKit.framework
+        ├── GrowingCDPCoreKit
+        ├── Headers
+        │   └── GrowingCoreKit.h
+        └── Info.plist
 ```
 
-8. 然后将最终生成的 GrowingCDPCoreKit 版本，替换到 growingio-sdk-ios-autotracker-upgrade/Tracker-upgrade-2to3-cdp/Frameworks/GrowingCDPCoreKit.framework/GrowingCDPCoreKit
-9. **Autotracker** 同理，修改 GROWING_AUTOTRACKER_CONFIG 值为 **1**，Podfile 修改为`pod 'GrowingAnalytics-cdp/Autotracker'`，进行同样操作，然后替换到 growingio-sdk-ios-autotracker-upgrade/Autotracker-upgrade-2to3-cdp/Frameworks/GrowingCDPCoreKit.framework/GrowingCDPCoreKit
+8. 然后将最终生成的 GrowingCDPCoreKit.xcframework，替换到 growingio-sdk-ios-autotracker-upgrade/Tracker-upgrade-2to3-cdp/Frameworks/GrowingCDPCoreKit.xcframework
+9. **Autotracker** 同理，修改 GROWING_AUTOTRACKER_CONFIG 值为 **1**，Podfile 修改为`pod 'GrowingAnalytics-cdp/Autotracker'`，进行同样操作，然后替换到 growingio-sdk-ios-autotracker-upgrade/Autotracker-upgrade-2to3-cdp/Frameworks/GrowingCDPCoreKit.xcframework
 
  # 测试场景
 
