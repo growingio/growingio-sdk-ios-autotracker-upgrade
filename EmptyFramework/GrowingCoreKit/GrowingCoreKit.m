@@ -416,7 +416,7 @@ static BOOL _disablePushTrack = YES;
         query = [query substringToIndex:([query length] - 1)];
     }
     
-    [[GrowingEventManager sharedInstance] postEventBuidler:GrowingHybridPageEvent.builder.setPath(pageName).setQuery(query).setTimestamp([GrowingTimeUtil currentTimeMillis])];
+    [[GrowingEventManager sharedInstance] postEventBuilder:GrowingHybridPageEvent.builder.setPath(pageName).setQuery(query).setTimestamp([GrowingTimeUtil currentTimeMillis])];
 #else
     GIOInvalidateMethod
 #endif
