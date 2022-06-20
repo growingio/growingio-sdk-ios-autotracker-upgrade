@@ -29,7 +29,7 @@
      withContext:(id)context {
     GrowingBaseBuilder *builder = event.to3xEventBuilder;
     if (builder) {
-        [[GrowingEventManager sharedInstance] postEventBuidler:builder];
+        [[GrowingEventManager sharedInstance] postEventBuilder:builder];
     }
 }
 
