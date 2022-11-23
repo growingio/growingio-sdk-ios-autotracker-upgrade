@@ -25,7 +25,7 @@
 #import "Upgrade-base/2x/EventBus/Event/GrowingEBUserIdEvent.h"
 #import "Upgrade-base/2x/GrowingMediator.h"
 
-#import "GrowingTrackerCore/Hook/GrowingAppLifecycle.h"
+#import "GrowingULAppLifecycle.h"
 #import "GrowingTrackerCore/Manager/GrowingSession.h"
 #import "GrowingTrackerCore/Public/GrowingBaseEvent.h"
 #import "GrowingTrackerCore/Event/GrowingBaseAttributesEvent.h"
@@ -33,7 +33,7 @@
 #import "GrowingTrackerCore/Event/GrowingTrackEventType.h"
 #import "GrowingTrackerCore/Helpers/NSURL+GrowingHelper.h"
 
-@interface GrowingUpgradeDispatcher ()<GrowingAppLifecycleDelegate,GrowingUserIdChangedDelegate>
+@interface GrowingUpgradeDispatcher ()<GrowingULAppLifecycleDelegate,GrowingUserIdChangedDelegate>
 @end
 
 @implementation GrowingUpgradeDispatcher
@@ -94,7 +94,7 @@
     }
 }
 
-#pragma mark - GrowingViewControllerLifecycleDelegate
+#pragma mark - GrowingULViewControllerLifecycleDelegate
 
 - (void)viewControllerDidAppear:(UIViewController *)controller {
     GrowingEBVCLifeEvent *lifeEvent = [[GrowingEBVCLifeEvent alloc] initWithLifeType:GrowingVCLifeDidAppear];

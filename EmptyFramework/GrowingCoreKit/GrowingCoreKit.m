@@ -15,22 +15,22 @@
 #import "GrowingTrackerCore/Event/GrowingEventManager.h"
 #import "GrowingTrackerCore/Event/GrowingEventGenerator.h"
 #import "GrowingTrackerCore/Event/Tools/GrowingPersistenceDataProvider.h"
-#import "GrowingTrackerCore/Utils/GrowingTimeUtil.h"
 #import "GrowingTrackerCore/Utils/GrowingArgumentChecker.h"
 #import "GrowingTrackerCore/Thirdparty/Logger/GrowingLog.h"
 #import "GrowingTrackerCore/Thirdparty/Logger/GrowingTTYLogger.h"
 #import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogMacros.h"
 #import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogger.h"
 #import "GrowingTrackerCore/Thread/GrowingDispatchManager.h"
-#import "GrowingTrackerCore/Hook/GrowingAppLifecycle.h"
 #import "GrowingTrackerCore/Helpers/NSString+GrowingHelper.h"
 #import "GrowingTrackerCore/DeepLink/GrowingDeepLinkHandler.h"
+#import "GrowingULTimeUtil.h"
+#import "GrowingULAppLifecycle.h"
 
 #if GROWING_AUTOTRACKER_CONFIG
 #import "GrowingAutotracker/GrowingAutotracker.h"
 #define TrackerClass GrowingAutotracker
 #import "Modules/Hybrid/Events/GrowingHybridPageEvent.h"
-#import "GrowingAutotrackerCore/Manager/GrowingViewControllerLifecycle.h"
+#import "GrowingULViewControllerLifecycle.h"
 #else
 #import "GrowingTracker/GrowingTracker.h"
 #define TrackerClass GrowingTracker
@@ -128,9 +128,9 @@ static NSString *kGrowingUserdefault_2xto3x = @"kGrowingUserdefault_2xto3x";
     [GrowingNotificationDelegateAutotracker track];
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [[GrowingAppLifecycle sharedInstance] addAppLifecycleDelegate:[GrowingUpgradeDispatcher sharedInstance]];
+        [[GrowingULAppLifecycle sharedInstance] addAppLifecycleDelegate:[GrowingUpgradeDispatcher sharedInstance]];
         [[GrowingSession currentSession] addUserIdChangedDelegate:[GrowingUpgradeDispatcher sharedInstance]];
-        [[GrowingViewControllerLifecycle sharedInstance] addViewControllerLifecycleDelegate:[GrowingUpgradeDispatcher sharedInstance]];
+        [[GrowingULViewControllerLifecycle sharedInstance] addViewControllerLifecycleDelegate:[GrowingUpgradeDispatcher sharedInstance]];
         [[GrowingNotificationDelegateManager sharedInstance] addNotificationDelegateObserver:[GrowingUpgradeDispatcher sharedInstance]];
         [[GrowingEventManager sharedInstance] addInterceptor:[GrowingUpgradeDispatcher sharedInstance]];
         [[GrowingDeepLinkHandler sharedInstance] addHandlersObject:[GrowingUpgradeDispatcher sharedInstance]];
@@ -416,7 +416,7 @@ static BOOL _disablePushTrack = YES;
         query = [query substringToIndex:([query length] - 1)];
     }
     
-    [[GrowingEventManager sharedInstance] postEventBuilder:GrowingHybridPageEvent.builder.setPath(pageName).setQuery(query).setTimestamp([GrowingTimeUtil currentTimeMillis])];
+    [[GrowingEventManager sharedInstance] postEventBuilder:GrowingHybridPageEvent.builder.setPath(pageName).setQuery(query).setTimestamp([GrowingULTimeUtil currentTimeMillis])];
 #else
     GIOInvalidateMethod
 #endif

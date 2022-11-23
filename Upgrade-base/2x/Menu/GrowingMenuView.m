@@ -12,7 +12,7 @@
 #import "Upgrade-base/Public/GrowingInstance.h"
 
 #import "GrowingTrackerCore/Helpers/UIControl+GrowingHelper.h"
-#import "GrowingTrackerCore/Utils/GrowingTimeUtil.h"
+#import "GrowingULTimeUtil.h"
 
 @interface GrowingMenuButton()
 @property (nonatomic, weak) GrowingMenuView *hostView;
@@ -41,7 +41,7 @@
 
 - (void)show
 {
-    self.showTime = @([GrowingTimeUtil currentTimeMillis]);
+    self.showTime = @([GrowingULTimeUtil currentTimeMillis]);
     if (!self.createTime)
     {
         self.createTime = self.showTime;
