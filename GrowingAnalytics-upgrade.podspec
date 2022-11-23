@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GrowingAnalytics-upgrade'
-  s.version          = '1.2.0'
+  s.version          = '1.3.0'
   s.summary          = 'GrowingIO SDK udgrade, support for 2.x to 3.x'
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
@@ -18,7 +18,7 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'Apache2.0', :file => 'LICENSE' }
   s.author           = { 'GrowingIO' => 'support@growingio.com' }
   s.source           = { :git => 'https://github.com/growingio/growingio-sdk-ios-autotracker-upgrade.git', :tag => s.version.to_s }
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
   s.requires_arc = true
   s.default_subspec = "Autotracker-upgrade-2to3-cdp"
   s.pod_target_xcconfig = {
@@ -28,19 +28,19 @@ TODO: Add long description of the pod here.
   s.subspec 'Upgrade-base' do |base|
       base.source_files = 'Upgrade-base/**/*{.h,.m}'
       base.public_header_files = 'Upgrade-base/Public/*.h'
-      base.dependency 'GrowingAnalytics/TrackerCore'
+      base.dependency 'GrowingAnalytics/TrackerCore', '~>3.4.5'
       base.vendored_frameworks = 'Upgrade-base/Frameworks/*.xcframework'
   end
   
   s.subspec 'Autotracker-upgrade-2to3-cdp' do |autotracker2to3cdp|
     autotracker2to3cdp.dependency 'GrowingAnalytics-upgrade/Upgrade-base'
-    autotracker2to3cdp.dependency 'GrowingAnalytics-cdp/Autotracker'
+    autotracker2to3cdp.dependency 'GrowingAnalytics-cdp/Autotracker', '~>3.4.5'
     autotracker2to3cdp.vendored_frameworks = 'Autotracker-upgrade-2to3-cdp/Frameworks/*.xcframework'
   end
   
   s.subspec 'Tracker-upgrade-2to3-cdp' do |tracker2to3cdp|
     tracker2to3cdp.dependency 'GrowingAnalytics-upgrade/Upgrade-base'
-    tracker2to3cdp.dependency 'GrowingAnalytics-cdp/Tracker'
+    tracker2to3cdp.dependency 'GrowingAnalytics-cdp/Tracker', '~>3.4.5'
     tracker2to3cdp.vendored_frameworks = 'Tracker-upgrade-2to3-cdp/Frameworks/*.xcframework'
   end
   
