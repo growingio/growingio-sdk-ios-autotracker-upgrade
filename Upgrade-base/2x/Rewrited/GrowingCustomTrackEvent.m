@@ -25,7 +25,6 @@
 #import "GrowingTrackerCore/Utils/GrowingArgumentChecker.h"
 #import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogger.h"
 #import "GrowingTrackerCore/Manager/GrowingSession.h"
-#import "GrowingTrackerCore/Utils/GrowingTimeUtil.h"
 #import "GrowingTrackerCore/Utils/GrowingDeviceInfo.h"
 
 @implementation GrowingCustomTrackEvent

@@ -12,7 +12,7 @@
 #import "GrowingTrackerCore/Helpers/NSArray+GrowingHelper.h"
 #import "GrowingTrackerCore/Helpers/NSData+GrowingHelper.h"
 #import "GrowingTrackerCore/Thirdparty/Logger/GrowingLogger.h"
-#import "GrowingTrackerCore/Utils/GrowingTimeUtil.h"
+#import "GrowingULTimeUtil.h"
 
 static NSMutableArray<NSMutableDictionary*> *allTypeInstance = nil;
 static NSMutableDictionary *allAccountIdDict = nil;
@@ -149,7 +149,7 @@ static NSMutableDictionary *allAccountIdDict = nil;
 
     [self authorityVerification:self.request];
     
-    [self.request addValue:@([GrowingTimeUtil currentTimeMillis]).stringValue forHTTPHeaderField:@"X-Timestamp"];
+    [self.request addValue:@([GrowingULTimeUtil currentTimeMillis]).stringValue forHTTPHeaderField:@"X-Timestamp"];
     [self.request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     
     NSData *JSONData = nil;

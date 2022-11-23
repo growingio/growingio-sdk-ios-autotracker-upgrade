@@ -22,7 +22,7 @@
 #import "Upgrade-base/2x/GrowingGlobal.h"
 
 #import "GrowingTrackerCore/Manager/GrowingSession.h"
-#import "GrowingTrackerCore/Utils/GrowingTimeUtil.h"
+#import "GrowingULTimeUtil.h"
 #import "GrowingTrackerCore/Utils/GrowingDeviceInfo.h"
 #import "GrowingTrackerCore/Event/GrowingVisitEvent.h"
 #import "GrowingTrackerCore/Event/GrowingCustomEvent.h"
@@ -55,7 +55,7 @@
         }
         else
         {
-            self.dataDict[@"tm"] = @([GrowingTimeUtil currentTimeMillis]);
+            self.dataDict[@"tm"] = @([GrowingULTimeUtil currentTimeMillis]);
         }
         self.dataDict[@"t"] = [self eventTypeKey];
         self.dataDict[@"d"] = [GrowingDeviceInfo currentDeviceInfo].bundleID;
